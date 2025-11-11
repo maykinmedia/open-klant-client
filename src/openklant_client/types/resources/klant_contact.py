@@ -1,4 +1,4 @@
-from typing import Literal, NotRequired, Optional, Required
+from typing import Literal, NotRequired, Required
 
 from typing_extensions import TypedDict
 
@@ -78,11 +78,9 @@ class KlantContact(TypedDict):
     nummer: str
     kanaal: str
     onderwerp: str
-    inhoud: Optional[str]
+    inhoud: str | None
     indicatieContactGelukt: Required[bool | None]
 
     taal: LanguageCode
     vertrouwelijk: bool
     plaatsgevondenOp: str
-
-

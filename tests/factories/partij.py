@@ -2,6 +2,7 @@ import factory
 import factory.faker
 from factory import fuzzy
 
+from openklant_client.types.iso_639_2 import LanguageCode
 from tests.factories.common import ForeignKeyRef
 from tests.factories.helpers import validator
 from tests.validators import (
@@ -9,7 +10,6 @@ from tests.validators import (
     CreatePartijOrganisatieDataValidator,
     CreatePartijPersoonDataValidator,
 )
-from openklant_client.types.iso_639_2 import LanguageCode
 
 
 class ContactnaamFactory(factory.Factory):

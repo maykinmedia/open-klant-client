@@ -30,10 +30,11 @@ class NonJSONResponse(ResponseError):
     """Response was unexpectedly not in JSON."""
 
     def __init__(self, response: Response):
+        content_type = response.headers.get("Content-Type")
         super().__init__(
             response,
-            f"The content type of this response was {response.headers.get('Content-Type')}, but "
-            " application/json was expected.",
+            f"The content type of this response was {content_type}, but "
+            "application/json was expected.",
         )
 
 
@@ -94,10 +95,11 @@ class BadRequest(ClientError):
             response,
             cast(ErrorResponseBody, body),
         )
-        OpenKlant2Exception.__init__(
-            self,
-            f'status={body["status"]} code={body["status"]} title="{body["title"]}":{invalid_params_formatted}',
+        msg = (
+            f"status={body['status']} code={body['status']} "
+            f'title="{body["title"]}":{invalid_params_formatted}'
         )
+        OpenKlant2Exception.__init__(self, msg)
 
 
 class NotFound(ClientError):

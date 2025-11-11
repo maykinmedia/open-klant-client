@@ -1,15 +1,15 @@
 import pytest
 from pydantic import TypeAdapter
 
-from tests.factories.betrokkene import BetrokkeneCreateDataFactory
-from tests.factories.klant_contact import CreateKlantContactDataFactory
-from tests.factories.partij import CreatePartijPersoonDataFactory
 from openklant_client.types.pagination import PaginatedResponseBody
 from openklant_client.types.resources.betrokkene import (
     Betrokkene,
 )
-from tests.validators import BetrokkeneCreateDataValidator, BetrokkeneValidator
 from openklant_client.types.resources.partij import Partij
+from tests.factories.betrokkene import BetrokkeneCreateDataFactory
+from tests.factories.klant_contact import CreateKlantContactDataFactory
+from tests.factories.partij import CreatePartijPersoonDataFactory
+from tests.validators import BetrokkeneCreateDataValidator, BetrokkeneValidator
 
 
 @pytest.fixture()
@@ -133,7 +133,8 @@ def test_retrieve_betrokkene(client, een_betrokkene):
 
 @pytest.mark.vcr
 def test_list_betrokkenen_as_pagination_iter(client, betrokkene_factory):
-    # We can't specify the pagesize, so we have to use the default 100 to create more than 1 page of data
+    # We can't specify the pagesize, so we have to use the default 100 to
+    # create more than 1 page of data
     betrokkenen = [betrokkene_factory() for _ in range(101)]
     assert client.betrokkene.list()["next"] is not None
 

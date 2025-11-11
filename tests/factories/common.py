@@ -9,6 +9,5 @@ class ForeignKeyRef(factory.Factory):
     uuid = factory.Faker("uuid4")
 
 
-IdentificationNumber = lambda: factory.LazyAttributeSequence(
-    lambda o, n: f"{n + 1:010d}"
-)
+def IdentificationNumber():
+    return factory.LazyAttributeSequence(lambda o, n: f"{n + 1:010d}")

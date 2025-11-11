@@ -79,5 +79,3 @@ class PartijIdentificator(TypedDict):
     partijIdentificator: PartijIdentificatorObject
     anderePartijIdentificator: NotRequired[str]
     subIdentificatorVan: ForeignKeyRef | None
-
-

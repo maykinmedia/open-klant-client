@@ -1,5 +1,5 @@
 import uuid
-from typing import Optional, cast
+from typing import cast
 
 from ape_pie import APIClient
 
@@ -32,7 +32,7 @@ class BetrokkeneResource(ResourceMixin):
         self,
         /,
         uuid: str | uuid.UUID,
-        params: Optional[BetrokkeneRetrieveParams] = None,
+        params: BetrokkeneRetrieveParams | None = None,
     ) -> Betrokkene:
         response = self._get(f"{self.base_path}/{str(uuid)}")
         return cast(Betrokkene, self.process_response(response))

@@ -1,13 +1,13 @@
 import pytest
 from pydantic import TypeAdapter
 
-from tests.factories.actor import CreateActorDataFactory
-from tests.factories.interne_taak import CreateInterneTaakFactory
-from tests.factories.klant_contact import CreateKlantContactDataFactory
 from openklant_client.types.pagination import PaginatedResponseBody
 from openklant_client.types.resources.interne_taak import (
     InterneTaak,
 )
+from tests.factories.actor import CreateActorDataFactory
+from tests.factories.interne_taak import CreateInterneTaakFactory
+from tests.factories.klant_contact import CreateKlantContactDataFactory
 from tests.validators import CreateInterneTaakDataValidator, InterneTaakValidator
 
 

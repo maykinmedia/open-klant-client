@@ -36,5 +36,3 @@ class OnderwerpobjectIdentificatorListParams(TypedDict, total=False):
     onderwerpobjectidentificatorCodeRegister: str
     onderwerpobjectidentificatorCodeSoortObjectId: str
     onderwerpobjectidentificatorObjectId: str
-
-

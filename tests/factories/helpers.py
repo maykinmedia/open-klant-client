@@ -22,4 +22,5 @@ def _get_literal_options(literal_type):
     return [str(option) for option in get_args(literal_type)]
 
 
-FuzzyLiteral = lambda literal: factory.fuzzy.FuzzyChoice(_get_literal_options(literal))
+def FuzzyLiteral(literal):
+    return factory.fuzzy.FuzzyChoice(_get_literal_options(literal))

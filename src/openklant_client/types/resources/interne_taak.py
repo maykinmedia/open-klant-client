@@ -25,5 +25,3 @@ class InterneTaak(TypedDict):
     status: Literal["te_verwerken", "verwerkt"]
     toegewezenOp: str
     afgehandeldOp: str | None
-
-

@@ -6,7 +6,10 @@ from openklant_client.types.resources import Partij
 from openklant_client.types.resources.partij_identificator import (
     PartijIdentificator,
 )
-from tests.validators import CreatePartijIdentificatorDataValidator, PartijIdentificatorValidator
+from tests.validators import (
+    CreatePartijIdentificatorDataValidator,
+    PartijIdentificatorValidator,
+)
 
 
 @pytest.fixture()

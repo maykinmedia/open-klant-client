@@ -41,5 +41,3 @@ class DigitaalAdres(TypedDict):
     omschrijving: str
     soortDigitaalAdres: SoortDigitaalAdres
     isStandaardAdres: bool
-
-

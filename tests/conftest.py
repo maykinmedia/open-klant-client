@@ -21,7 +21,8 @@ def openklant_service_singleton(request):
     # should be session-scoped, spawning the service at the start of the run
     # and tearing it down at completion of the run.
     #
-    # The client fixture below, by cotrast, should reset the database state for each test.
+    # The client fixture below, by cotrast, should reset the database state
+    # for each test.
     service = OpenKlantServiceManager()
     if request.config.getoption("--with-openklant-service"):
         with service.live_service() as running_service:

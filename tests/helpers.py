@@ -115,7 +115,10 @@ class OpenKlantServiceManager:
                     "pk": 1,
                     "fields": {
                         # password is "secret"
-                        "password": "pbkdf2_sha256$600000$11HRNvD3J8QPTCkp0avgKX$gY/NX5+Ap8jAmD86HxEneVHwzi9+g45NhTBMkB3vJuo=",
+                        "password": (
+                            "pbkdf2_sha256$600000$11HRNvD3J8QPTCkp0avgKX$"
+                            "gY/NX5+Ap8jAmD86HxEneVHwzi9+g45NhTBMkB3vJuo="
+                        ),
                         "last_login": "2025-01-28T10:30:23.474Z",
                         "is_superuser": True,
                         "username": "admin",
@@ -144,7 +147,8 @@ class OpenKlantServiceManager:
                 if elapsed_time > max_wait:
                     logger.info("Max wait time exceeded.")
                     raise RuntimeError(
-                        f"Maximum wait for service to be healthy exceeded: {elapsed_time} > {max_wait}"
+                        f"Maximum wait for service to be healthy exceeded: "
+                        f"{elapsed_time} > {max_wait}"
                     ) from None
 
                 time.sleep(interval)
@@ -205,10 +209,10 @@ class OpenKlantServiceManager:
         return clean_state_manager()
 
     def live_service(self):
-        """Context manager to spawn a live OpenKlant service and clean it up upon completion.
+        """Context manager to spawn a live OpenKlant service and clean it up.
 
-        You will commonly nest a clean_state() context manager within the live_service block,
-        for instance:
+        You will commonly nest a clean_state() context manager within the
+        live_service block, for instance:
 
             with service.live_server_manager() as live_service:
                 with live_service.clean_state() as client:

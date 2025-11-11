@@ -1,9 +1,9 @@
-import textwrap
-
 import pytest
 from pydantic import TypeAdapter
 
 from openklant_client.exceptions import BadRequest
+from openklant_client.types import PaginatedResponseBody
+from openklant_client.types.resources.partij import Partij
 from tests.factories.partij import (
     CreatePartijContactPersoonDataFactory,
     CreatePartijOrganisatieDataFactory,
@@ -15,8 +15,6 @@ from tests.validators import (
     CreatePartijPersoonDataValidator,
     PartijValidator,
 )
-from openklant_client.types import PaginatedResponseBody
-from openklant_client.types.resources.partij import Partij
 
 
 @pytest.fixture()
@@ -236,28 +234,27 @@ def test_create_with_bad_request_exception(client):
                 "reason": "Dit veld is vereist.",
             },
         ],
-        textwrap.dedent(
-            """
-                status=400 code=400 title="Invalid input.":
-                Invalid parameters:
-                {'code': 'required',
-                 'name': 'digitaleAdressen',
-                 'reason': 'Dit veld is vereist.'}
-                {'code': 'required',
-                 'name': 'voorkeursDigitaalAdres',
-                 'reason': 'Dit veld is vereist.'}
-                {'code': 'required',
-                 'name': 'rekeningnummers',
-                 'reason': 'Dit veld is vereist.'}
-                {'code': 'required',
-                 'name': 'voorkeursRekeningnummer',
-                 'reason': 'Dit veld is vereist.'}
-                {'code': 'required', 'name': 'soortPartij', 'reason': 'Dit veld is vereist.'}
-                {'code': 'required',
-                 'name': 'indicatieActief',
-                 'reason': 'Dit veld is vereist.'}
-            """
-        ).strip(),
+        (
+            'status=400 code=400 title="Invalid input.":\n'
+            "Invalid parameters:\n"
+            "{'code': 'required',\n"
+            " 'name': 'digitaleAdressen',\n"
+            " 'reason': 'Dit veld is vereist.'}\n"
+            "{'code': 'required',\n"
+            " 'name': 'voorkeursDigitaalAdres',\n"
+            " 'reason': 'Dit veld is vereist.'}\n"
+            "{'code': 'required',\n"
+            " 'name': 'rekeningnummers',\n"
+            " 'reason': 'Dit veld is vereist.'}\n"
+            "{'code': 'required',\n"
+            " 'name': 'voorkeursRekeningnummer',\n"
+            " 'reason': 'Dit veld is vereist.'}\n"
+            "{'code': 'required', 'name': 'soortPartij', "
+            "'reason': 'Dit veld is vereist.'}\n"
+            "{'code': 'required',\n"
+            " 'name': 'indicatieActief',\n"
+            " 'reason': 'Dit veld is vereist.'}"
+        ),
     )
 
     assert got == want

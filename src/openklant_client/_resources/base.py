@@ -1,18 +1,14 @@
+from __future__ import annotations
+
 import json
 import logging
+from collections.abc import Callable, Generator, Mapping, MutableMapping
 from typing import (
+    TYPE_CHECKING,
     Any,
-    Callable,
-    Dict,
-    Generator,
-    List,
-    Mapping,
-    MutableMapping,
-    Optional,
     ParamSpec,
     TypeGuard,
     TypeVar,
-    Union,
     cast,
 )
 
@@ -31,14 +27,14 @@ from openklant_client.exceptions import (
 )
 from openklant_client.types.pagination import PaginatedResponseBody
 
+if TYPE_CHECKING:
+    JSONPrimitive = str | int | None | float
+    JSONValue = JSONPrimitive | "JSONObject" | list["JSONValue"]
+    JSONObject = dict[str, JSONValue]
+
 logger = logging.getLogger(__name__)
 
 ResourceResponse = MutableMapping[str, Any]
-
-
-JSONPrimitive = Union[str, int, None, float]
-JSONValue = Union[JSONPrimitive, "JSONObject", List["JSONValue"]]
-JSONObject = Dict[str, JSONValue]
 
 P = ParamSpec("P")
 T = TypeVar("T")
@@ -129,7 +125,7 @@ class ResourceMixin:
     def _paginator(
         self,
         paginated_data: PaginatedResponseBody[T],
-        max_requests: Optional[int] = None,
+        max_requests: int | None = None,
     ) -> Generator[T, Any, None]:
         def row_iterator(
             _data: PaginatedResponseBody[T], num_requests=0
@@ -140,9 +136,11 @@ class ResourceMixin:
             if next_url := _data.get("next"):
                 if max_requests and num_requests >= max_requests:
                     logger.info(
-                        "Number of requests while retrieving paginated results reached maximum, returning results",
-                        max_requests=max_requests,
-                        next_url=next_url,
+                        "Number of requests while retrieving paginated "
+                        "results reached maximum (%s), returning results. "
+                        "Next URL: %s",
+                        max_requests,
+                        next_url,
                     )
                     return
 

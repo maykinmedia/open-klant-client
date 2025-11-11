@@ -5,7 +5,10 @@ from ape_pie import APIClient
 
 from openklant_client._resources.base import ResourceMixin
 from openklant_client.types.pagination import PaginatedResponseBody
-from openklant_client.types.resources.interne_taak import CreateInterneTaakData, InterneTaak
+from openklant_client.types.resources.interne_taak import (
+    CreateInterneTaakData,
+    InterneTaak,
+)
 
 
 class InterneTaakResource(ResourceMixin):

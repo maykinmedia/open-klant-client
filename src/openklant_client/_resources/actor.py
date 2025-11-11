@@ -5,7 +5,11 @@ from ape_pie import APIClient
 
 from openklant_client._resources.base import ResourceMixin
 from openklant_client.types.pagination import PaginatedResponseBody
-from openklant_client.types.resources.actor import Actor, ActorListParams, CreateActorData
+from openklant_client.types.resources.actor import (
+    Actor,
+    ActorListParams,
+    CreateActorData,
+)
 
 
 class ActorResource(ResourceMixin):

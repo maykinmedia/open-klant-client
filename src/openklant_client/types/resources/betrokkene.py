@@ -42,5 +42,3 @@ class Betrokkene(TypedDict):
 
 class BetrokkeneRetrieveParams(TypedDict):
     expand: NotRequired[list[Literal["digitaleAdressen",]]]
-
-

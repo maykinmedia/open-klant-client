@@ -1,5 +1,5 @@
 import uuid
-from typing import Optional, cast
+from typing import cast
 
 from ape_pie import APIClient
 
@@ -27,12 +27,13 @@ class PartijResource(ResourceMixin):
         return cast(PaginatedResponseBody[Partij], self.process_response(response))
 
     def retrieve(
-        self, /, uuid: str | uuid.UUID, *, params: Optional[PartijRetrieveParams] = None
+        self, /, uuid: str | uuid.UUID, *, params: PartijRetrieveParams | None = None
     ) -> Partij:
         response = self._get(f"{self.base_path}/{str(uuid)}", params=params)
         return cast(Partij, self.process_response(response))
 
-    # Partij is polymorphic on "soortPartij", with varying fields for Persoon, Organisatie and ContactPersoon
+    # Partij is polymorphic on "soortPartij", with varying fields for
+    # Persoon, Organisatie and ContactPersoon
     def create_organisatie(self, *, data: CreatePartijOrganisatieData) -> Partij:
         return self._create(data=data)
 
