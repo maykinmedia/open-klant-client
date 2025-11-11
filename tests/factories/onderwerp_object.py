@@ -2,8 +2,8 @@ import factory
 import factory.faker
 import factory.fuzzy
 
-from openklant_client.tests.factories.helpers import validator
-from openklant_client.tests.validators import CreateOnderwerpObjectDataValidator
+from tests.factories.helpers import validator
+from tests.validators import CreateOnderwerpObjectDataValidator
 
 
 class OnderwerpObjectIdentificatorFactory(factory.Factory):

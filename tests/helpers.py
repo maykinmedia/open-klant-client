@@ -22,7 +22,7 @@ class OpenKlantServiceManager:
     _api_path: str = "/klantinteracties/api/v1"
     _api_token: str = "b2eb1da9861da88743d72a3fb4344288fe2cba44"
     _docker_compose_project_name: str = "openklant2-api-test"
-    _docker_compose_path: Path = BASE_DIR.parent.parent / "docker-compose.yaml"
+    _docker_compose_path: Path = BASE_DIR / "docker-compose.yaml"
 
     def _docker_compose(
         self,

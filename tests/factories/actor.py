@@ -1,9 +1,9 @@
 import factory
 import factory.fuzzy
 
-from openklant_client.tests.factories.common import IdentificationNumber
-from openklant_client.tests.factories.helpers import validator
-from openklant_client.tests.validators import CreateActorDataValidator
+from tests.factories.common import IdentificationNumber
+from tests.factories.helpers import validator
+from tests.validators import CreateActorDataValidator
 
 
 class ActorIdentificatorFactory(factory.Factory):

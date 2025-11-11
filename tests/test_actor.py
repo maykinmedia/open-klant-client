@@ -1,8 +1,8 @@
 import pytest
 from pydantic import TypeAdapter
 
-from openklant_client.tests.factories.actor import CreateActorDataFactory
-from openklant_client.tests.validators import ActorValidator, CreateActorDataValidator
+from tests.factories.actor import CreateActorDataFactory
+from tests.validators import ActorValidator, CreateActorDataValidator
 from openklant_client.types.pagination import PaginatedResponseBody
 from openklant_client.types.resources.actor import Actor
 

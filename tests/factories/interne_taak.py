@@ -1,8 +1,8 @@
 import factory
 import factory.fuzzy
 
-from openklant_client.tests.factories.helpers import validator
-from openklant_client.tests.validators import CreateInterneTaakDataValidator
+from tests.factories.helpers import validator
+from tests.validators import CreateInterneTaakDataValidator
 
 
 @validator(CreateInterneTaakDataValidator)

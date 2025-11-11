@@ -1,6 +1,6 @@
 import pytest
 
-from openklant_client.tests.helpers import OpenKlantServiceManager
+from tests.helpers import OpenKlantServiceManager
 
 
 def pytest_addoption(parser):

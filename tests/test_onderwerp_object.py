@@ -1,11 +1,11 @@
 import pytest
 from pydantic import TypeAdapter
 
-from openklant_client.tests.factories.klant_contact import CreateKlantContactDataFactory
-from openklant_client.tests.factories.onderwerp_object import (
+from tests.factories.klant_contact import CreateKlantContactDataFactory
+from tests.factories.onderwerp_object import (
     CreateOnderwerpObjectDataFactory,
 )
-from openklant_client.tests.validators import (
+from tests.validators import (
     CreateOnderwerpObjectDataValidator,
     OnderwerpObjectValidator,
 )

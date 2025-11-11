@@ -2,9 +2,9 @@ import factory
 import factory.faker
 from factory import fuzzy
 
-from openklant_client.tests.factories.common import ForeignKeyRef
-from openklant_client.tests.factories.helpers import validator
-from openklant_client.tests.validators import (
+from tests.factories.common import ForeignKeyRef
+from tests.factories.helpers import validator
+from tests.validators import (
     CreatePartijContactpersoonDataValidator,
     CreatePartijOrganisatieDataValidator,
     CreatePartijPersoonDataValidator,

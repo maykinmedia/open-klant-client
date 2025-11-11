@@ -1,14 +1,14 @@
 import pytest
 from pydantic import TypeAdapter
 
-from openklant_client.tests.factories.betrokkene import BetrokkeneCreateDataFactory
-from openklant_client.tests.factories.klant_contact import CreateKlantContactDataFactory
-from openklant_client.tests.factories.partij import CreatePartijPersoonDataFactory
+from tests.factories.betrokkene import BetrokkeneCreateDataFactory
+from tests.factories.klant_contact import CreateKlantContactDataFactory
+from tests.factories.partij import CreatePartijPersoonDataFactory
 from openklant_client.types.pagination import PaginatedResponseBody
 from openklant_client.types.resources.betrokkene import (
     Betrokkene,
 )
-from openklant_client.tests.validators import BetrokkeneCreateDataValidator, BetrokkeneValidator
+from tests.validators import BetrokkeneCreateDataValidator, BetrokkeneValidator
 from openklant_client.types.resources.partij import Partij
 
 

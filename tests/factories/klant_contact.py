@@ -2,9 +2,9 @@ import factory
 import factory.faker
 import factory.fuzzy
 
-from openklant_client.tests.factories.common import IdentificationNumber
-from openklant_client.tests.factories.helpers import validator
-from openklant_client.tests.validators import CreateKlantContactDataValidator
+from tests.factories.common import IdentificationNumber
+from tests.factories.helpers import validator
+from tests.validators import CreateKlantContactDataValidator
 
 
 @validator(CreateKlantContactDataValidator)

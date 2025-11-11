@@ -4,12 +4,12 @@ import pytest
 from pydantic import TypeAdapter
 
 from openklant_client.exceptions import BadRequest
-from openklant_client.tests.factories.partij import (
+from tests.factories.partij import (
     CreatePartijContactPersoonDataFactory,
     CreatePartijOrganisatieDataFactory,
     CreatePartijPersoonDataFactory,
 )
-from openklant_client.tests.validators import (
+from tests.validators import (
     CreatePartijContactpersoonDataValidator,
     CreatePartijOrganisatieDataValidator,
     CreatePartijPersoonDataValidator,

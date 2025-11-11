@@ -4,9 +4,9 @@ import factory
 import factory.faker
 from faker import Faker
 
-from openklant_client.tests.factories.common import ForeignKeyRef
-from openklant_client.tests.factories.helpers import validator
-from openklant_client.tests.validators import DigitaalAdresCreateDataValidator
+from tests.factories.common import ForeignKeyRef
+from tests.factories.helpers import validator
+from tests.validators import DigitaalAdresCreateDataValidator
 
 fake = Faker("nl_NL")
 
