@@ -1,3 +1,3 @@
-from openklant_client.client import OpenKlant2Client
+from openklant_client.client import OpenKlantClient
 
-__all__ = ["OpenKlant2Client"]
+__all__ = ["OpenKlantClient"]

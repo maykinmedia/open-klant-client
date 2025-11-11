@@ -5,9 +5,9 @@ This Python package provides a client for interacting with Open Klant 2 services
 ## Usage
 
 ```python
-from openklant2 import OpenKlant2Client
+from openklant2 import OpenKlantClient
 
-client = OpenKlant2Client(api_root="https://openklant.maykin.nl/klantinteracties", token="your_api_token")
+client = OpenKlantClient(api_root="https://openklant.maykin.nl/klantinteracties", token="your_api_token")
 
 >>> partijen = client.Partij.list()
 >>> partijen

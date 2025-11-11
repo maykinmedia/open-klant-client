@@ -8,7 +8,7 @@ from urllib.parse import urljoin
 
 import requests
 
-from openklant_client.client import OpenKlant2Client
+from openklant_client.client import OpenKlantClient
 
 BASE_DIR = Path(__file__).parent.parent.resolve()
 
@@ -172,7 +172,7 @@ class OpenKlantServiceManager:
         return urljoin(self._api_root, self._api_path)
 
     def client_factory(self):
-        return OpenKlant2Client(
+        return OpenKlantClient(
             base_url=self.api_url,
             request_kwargs={"headers": {"Authorization": f"Token {self._api_token}"}},
         )
@@ -239,7 +239,7 @@ class LiveOpenKlantTestMixin:
         return cls.use_live_service
 
     @property
-    def openklant_client(self) -> OpenKlant2Client:
+    def openklant_client(self) -> OpenKlantClient:
         return self._service.client_factory()
 
     def reset_db(self):

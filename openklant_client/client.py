@@ -12,7 +12,7 @@ from openklant_client._resources.partij import PartijResource
 from openklant_client._resources.partij_identificator import PartijIdentificatorResource
 
 
-class OpenKlant2Client(APIClient):
+class OpenKlantClient(APIClient):
     partij: PartijResource
     partij_identificator: PartijIdentificatorResource
     digitaal_adres: DigitaalAdresResource
