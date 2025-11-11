@@ -1,4 +1,5 @@
 import json
+import logging
 from typing import (
     Any,
     Callable,
@@ -15,9 +16,7 @@ from typing import (
     cast,
 )
 
-import pydantic
 import requests
-import structlog
 from ape_pie import APIClient
 
 from openklant_client.exceptions import (
@@ -30,13 +29,9 @@ from openklant_client.exceptions import (
     StructuredErrorResponse,
     Unauthorized,
 )
-from openklant_client.types.error import (
-    ErrorResponseBodyValidator,
-    ValidationErrorResponseBodyValidator,
-)
 from openklant_client.types.pagination import PaginatedResponseBody
 
-logger = structlog.stdlib.get_logger(__name__)
+logger = logging.getLogger(__name__)
 
 ResourceResponse = MutableMapping[str, Any]
 
@@ -47,6 +42,21 @@ JSONObject = Dict[str, JSONValue]
 
 P = ParamSpec("P")
 T = TypeVar("T")
+
+
+def _is_error_response(data: Any) -> bool:
+    """Check if response data matches error response structure."""
+    if not isinstance(data, dict):
+        return False
+    required_keys = {"type", "code", "title", "status", "detail", "instance"}
+    return required_keys.issubset(data.keys())
+
+
+def _is_validation_error_response(data: Any) -> bool:
+    """Check if response data matches validation error response structure."""
+    if not _is_error_response(data):
+        return False
+    return data.get("status") == 400 and "invalidParams" in data
 
 
 class ResourceMixin:
@@ -75,11 +85,13 @@ class ResourceMixin:
             case code if code >= 200 and code < 300 and response_data:
                 return response_data
             case code if code >= 400 and code < 500 and response_data:
-                validator = ErrorResponseBodyValidator
                 exc_class = StructuredErrorResponse
+                is_valid_error = _is_error_response(response_data)
+
                 match code:
                     case 400:
-                        validator = ValidationErrorResponseBodyValidator
+                        if _is_validation_error_response(response_data):
+                            raise BadRequest(response, response_data)
                         exc_class = BadRequest
                     case 401:
                         exc_class = Unauthorized
@@ -90,12 +102,10 @@ class ResourceMixin:
                     case _:
                         pass
 
-                try:
-                    validator.validate_python(response_data)
+                if is_valid_error:
                     raise exc_class(response, response_data)
-                except pydantic.ValidationError:
-                    # JSON body, but not in an expected schema. Fall through to generic ErrorResponse
-                    pass
+                # JSON body, but not in expected schema. Fall through to
+                # generic ErrorResponse
             case _:
                 pass
 

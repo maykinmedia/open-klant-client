@@ -1,6 +1,5 @@
 from typing import Literal, NotRequired, Optional, Required
 
-from pydantic import TypeAdapter
 from typing_extensions import TypedDict
 
 from openklant_client.types.common import BooleanQueryParam, ForeignKeyRef
@@ -87,5 +86,3 @@ class KlantContact(TypedDict):
     plaatsgevondenOp: str
 
 
-CreateKlantContactDataValidator = TypeAdapter(CreateKlantContactData)
-KlantContactValidator = TypeAdapter(KlantContact)

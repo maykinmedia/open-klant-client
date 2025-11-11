@@ -1,6 +1,5 @@
 from typing import Literal, NotRequired
 
-from pydantic import TypeAdapter
 from typing_extensions import TypedDict
 
 from openklant_client.types.common import ForeignKeyRef, FullForeigKeyRef
@@ -28,5 +27,3 @@ class InterneTaak(TypedDict):
     afgehandeldOp: str | None
 
 
-CreateInterneTaakDataValidator = TypeAdapter(CreateInterneTaakData)
-InterneTaakValidator = TypeAdapter(InterneTaak)

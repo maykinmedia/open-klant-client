@@ -1,6 +1,6 @@
 #!/bin/bash
 
-delete_path=$(realpath ./tests/cassettes)
+delete_path=$(realpath ./src/openklant_client/tests/cassettes)
 
 # Display the full path and ask for confirmation
 echo "You are about to recursively delete all VCR cassettes from the following directory:"

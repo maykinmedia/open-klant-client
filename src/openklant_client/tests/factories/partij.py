@@ -2,14 +2,14 @@ import factory
 import factory.faker
 from factory import fuzzy
 
-from openklant_client.factories.common import ForeignKeyRef
-from openklant_client.factories.helpers import validator
-from openklant_client.types.iso_639_2 import LanguageCode
-from openklant_client.types.resources.partij import (
+from openklant_client.tests.factories.common import ForeignKeyRef
+from openklant_client.tests.factories.helpers import validator
+from openklant_client.tests.validators import (
     CreatePartijContactpersoonDataValidator,
     CreatePartijOrganisatieDataValidator,
     CreatePartijPersoonDataValidator,
 )
+from openklant_client.types.iso_639_2 import LanguageCode
 
 
 class ContactnaamFactory(factory.Factory):

@@ -4,10 +4,9 @@ from pydantic import TypeAdapter
 from openklant_client.types.pagination import PaginatedResponseBody
 from openklant_client.types.resources import Partij
 from openklant_client.types.resources.partij_identificator import (
-    CreatePartijIdentificatorDataValidator,
     PartijIdentificator,
-    PartijIdentificatorValidator,
 )
+from openklant_client.tests.validators import CreatePartijIdentificatorDataValidator, PartijIdentificatorValidator
 
 
 @pytest.fixture()

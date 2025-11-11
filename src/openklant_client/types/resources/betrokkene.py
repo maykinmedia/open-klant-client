@@ -1,6 +1,5 @@
 from typing import Literal, NotRequired
 
-from pydantic import TypeAdapter
 from typing_extensions import TypedDict
 
 from openklant_client.types.common import Adres, ForeignKeyRef, FullForeigKeyRef
@@ -45,5 +44,3 @@ class BetrokkeneRetrieveParams(TypedDict):
     expand: NotRequired[list[Literal["digitaleAdressen",]]]
 
 
-BetrokkeneCreateDataValidator = TypeAdapter(BetrokkeneCreateData)
-BetrokkeneValidator = TypeAdapter(Betrokkene)

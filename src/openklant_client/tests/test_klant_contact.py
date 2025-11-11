@@ -1,13 +1,12 @@
 import pytest
 from pydantic import TypeAdapter
 
-from openklant_client.factories.klant_contact import CreateKlantContactDataFactory
+from openklant_client.tests.factories.klant_contact import CreateKlantContactDataFactory
 from openklant_client.types.pagination import PaginatedResponseBody
 from openklant_client.types.resources.klant_contact import (
-    CreateKlantContactDataValidator,
     KlantContact,
-    KlantContactValidator,
 )
+from openklant_client.tests.validators import CreateKlantContactDataValidator, KlantContactValidator
 
 
 @pytest.fixture()

@@ -4,19 +4,19 @@ import pytest
 from pydantic import TypeAdapter
 
 from openklant_client.exceptions import BadRequest
-from openklant_client.factories.partij import (
+from openklant_client.tests.factories.partij import (
     CreatePartijContactPersoonDataFactory,
     CreatePartijOrganisatieDataFactory,
     CreatePartijPersoonDataFactory,
 )
-from openklant_client.types import PaginatedResponseBody
-from openklant_client.types.resources import (
+from openklant_client.tests.validators import (
     CreatePartijContactpersoonDataValidator,
     CreatePartijOrganisatieDataValidator,
     CreatePartijPersoonDataValidator,
-    Partij,
     PartijValidator,
 )
+from openklant_client.types import PaginatedResponseBody
+from openklant_client.types.resources.partij import Partij
 
 
 @pytest.fixture()

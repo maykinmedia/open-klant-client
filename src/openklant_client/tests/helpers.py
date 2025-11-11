@@ -1,4 +1,5 @@
 import json
+import logging
 import subprocess
 import time
 from contextlib import contextmanager
@@ -6,13 +7,12 @@ from pathlib import Path
 from urllib.parse import urljoin
 
 import requests
-import structlog
 
 from openklant_client.client import OpenKlant2Client
 
 BASE_DIR = Path(__file__).parent.parent.resolve()
 
-logger = structlog.stdlib.get_logger(__name__)
+logger = logging.getLogger(__name__)
 
 
 class OpenKlantServiceManager:
@@ -22,7 +22,7 @@ class OpenKlantServiceManager:
     _api_path: str = "/klantinteracties/api/v1"
     _api_token: str = "b2eb1da9861da88743d72a3fb4344288fe2cba44"
     _docker_compose_project_name: str = "openklant2-api-test"
-    _docker_compose_path: Path = BASE_DIR / "docker-compose.yaml"
+    _docker_compose_path: Path = BASE_DIR.parent.parent / "docker-compose.yaml"
 
     def _docker_compose(
         self,
@@ -47,9 +47,9 @@ class OpenKlantServiceManager:
             )
         except subprocess.CalledProcessError as exc:
             logger.exception(
-                "Unable to execute command",
-                stderr=str(exc.stderr),
-                stdout=str(exc.stdout),
+                "Unable to execute command. stderr: %s, stdout: %s",
+                exc.stderr,
+                exc.stdout,
             )
             raise
 

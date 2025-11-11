@@ -1,6 +1,5 @@
 from typing import Literal
 
-from pydantic import TypeAdapter
 from typing_extensions import TypedDict
 
 
@@ -22,7 +21,3 @@ class ErrorResponseBody(TypedDict):
 class ValidationErrorResponseBody(ErrorResponseBody):
     status: Literal[400]
     invalidParams: list[InvalidParam]
-
-
-ErrorResponseBodyValidator = TypeAdapter(ErrorResponseBody)
-ValidationErrorResponseBodyValidator = TypeAdapter(ValidationErrorResponseBody)

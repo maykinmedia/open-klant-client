@@ -1,6 +1,5 @@
 from typing import NotRequired
 
-from pydantic import TypeAdapter
 from typing_extensions import TypedDict
 
 from openklant_client.types.common import ForeignKeyRef, FullForeigKeyRef
@@ -39,5 +38,3 @@ class OnderwerpobjectIdentificatorListParams(TypedDict, total=False):
     onderwerpobjectidentificatorObjectId: str
 
 
-CreateOnderwerpObjectDataValidator = TypeAdapter(CreateOnderwerpObjectData)
-OnderwerpObjectValidator = TypeAdapter(OnderwerpObject)

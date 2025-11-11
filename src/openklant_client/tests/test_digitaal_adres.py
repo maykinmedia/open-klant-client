@@ -1,15 +1,14 @@
 import pytest
 from pydantic import TypeAdapter
 
-from openklant_client.factories.digitaal_adres import DigitaalAdresCreateDataFactory
-from openklant_client.factories.partij import CreatePartijPersoonDataFactory
+from openklant_client.tests.factories.digitaal_adres import DigitaalAdresCreateDataFactory
+from openklant_client.tests.factories.partij import CreatePartijPersoonDataFactory
 from openklant_client.types.pagination import PaginatedResponseBody
 from openklant_client.types.resources import Partij
 from openklant_client.types.resources.digitaal_adres import (
     DigitaalAdres,
-    DigitaalAdresCreateDataValidator,
-    DigitaalAdresValidator,
 )
+from openklant_client.tests.validators import DigitaalAdresCreateDataValidator, DigitaalAdresValidator
 
 
 @pytest.fixture()

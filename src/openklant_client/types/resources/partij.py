@@ -1,6 +1,5 @@
 from typing import Literal, NotRequired
 
-from pydantic import TypeAdapter
 from typing_extensions import TypedDict
 
 from openklant_client.types.common import Adres, CreateAdres, ForeignKeyRef
@@ -164,7 +163,3 @@ class Partij(TypedDict):
 # Validators
 #
 
-PartijValidator = TypeAdapter(Partij)
-CreatePartijPersoonDataValidator = TypeAdapter(CreatePartijPersoonData)
-CreatePartijOrganisatieDataValidator = TypeAdapter(CreatePartijOrganisatieData)
-CreatePartijContactpersoonDataValidator = TypeAdapter(CreatePartijContactpersoonData)

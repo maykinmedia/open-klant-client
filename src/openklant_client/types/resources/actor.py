@@ -1,6 +1,5 @@
 from typing import Literal, NotRequired
 
-from pydantic import TypeAdapter
 from typing_extensions import TypedDict
 
 from openklant_client.types.common import BooleanQueryParam
@@ -39,7 +38,3 @@ class ActorListParams(TypedDict, total=False):
     naam: str
     page: int
     soortActor: SoortActor
-
-
-CreateActorDataValidator = TypeAdapter(CreateActorData)
-ActorValidator = TypeAdapter(Actor)

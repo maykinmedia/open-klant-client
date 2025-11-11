@@ -1,19 +1,15 @@
 from .partij import (
     CreateContactnaam,
     CreatePartijContactpersoonData,
-    CreatePartijContactpersoonDataValidator,
     CreatePartijDataBase,
     CreatePartijIdentificatieContactpersoon,
     CreatePartijIdentificatieOrganisatie,
     CreatePartijIdentificatiePersoon,
     CreatePartijOrganisatieData,
-    CreatePartijOrganisatieDataValidator,
     CreatePartijPersoonData,
-    CreatePartijPersoonDataValidator,
     Partij,
     PartijListParams,
     PartijRetrieveParams,
-    PartijValidator,
 )
 
 __all__ = [
@@ -28,8 +24,4 @@ __all__ = [
     "Partij",
     "PartijListParams",
     "PartijRetrieveParams",
-    "PartijValidator",
-    "CreatePartijPersoonDataValidator",
-    "CreatePartijOrganisatieDataValidator",
-    "CreatePartijContactpersoonDataValidator",
 ]

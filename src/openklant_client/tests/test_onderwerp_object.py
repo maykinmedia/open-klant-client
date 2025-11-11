@@ -1,14 +1,18 @@
 import pytest
 from pydantic import TypeAdapter
 
-from openklant_client.factories.klant_contact import CreateKlantContactDataFactory
-from openklant_client.factories.onderwerp_object import CreateOnderwerpObjectDataFactory
+from openklant_client.tests.factories.klant_contact import CreateKlantContactDataFactory
+from openklant_client.tests.factories.onderwerp_object import (
+    CreateOnderwerpObjectDataFactory,
+)
+from openklant_client.tests.validators import (
+    CreateOnderwerpObjectDataValidator,
+    OnderwerpObjectValidator,
+)
 from openklant_client.types.pagination import PaginatedResponseBody
 from openklant_client.types.resources.onderwerp_object import (
     CreateOnderwerpObjectData,
-    CreateOnderwerpObjectDataValidator,
     OnderwerpObject,
-    OnderwerpObjectValidator,
 )
 
 

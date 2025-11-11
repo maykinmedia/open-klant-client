@@ -1,6 +1,5 @@
 from typing import Literal, NotRequired
 
-from pydantic import TypeAdapter
 from typing_extensions import TypedDict
 
 from openklant_client.types.common import ForeignKeyRef, FullForeigKeyRef
@@ -44,5 +43,3 @@ class DigitaalAdres(TypedDict):
     isStandaardAdres: bool
 
 
-DigitaalAdresCreateDataValidator = TypeAdapter(DigitaalAdresCreateData)
-DigitaalAdresValidator = TypeAdapter(DigitaalAdres)

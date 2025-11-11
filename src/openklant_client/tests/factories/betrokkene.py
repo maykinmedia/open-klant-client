@@ -2,12 +2,10 @@ import factory
 import factory.faker
 import factory.fuzzy
 
-from openklant_client.factories.common import ForeignKeyRef
-from openklant_client.factories.helpers import FuzzyLiteral, validator
-from openklant_client.types.resources.betrokkene import (
-    BetrokkeneCreateDataValidator,
-    BetrokkeneRol,
-)
+from openklant_client.tests.factories.common import ForeignKeyRef
+from openklant_client.tests.factories.helpers import FuzzyLiteral, validator
+from openklant_client.tests.validators import BetrokkeneCreateDataValidator
+from openklant_client.types.resources.betrokkene import BetrokkeneRol
 
 
 class ContactnaamFactory(factory.Factory):
