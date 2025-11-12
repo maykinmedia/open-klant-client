@@ -1,56 +1,69 @@
-# Open Klant 2 API Client
+=================
+Open Klant Client
+=================
 
-This Python package provides a client for interacting with Open Klant 2 services. It simplifies the process of making requests to the API and handling responses.
+A Python client library for interacting with the `Open Klant API <https://github.com/maykinmedia/open-klant>`_.
 
-## Usage
+Installation
+============
 
-```python
-from openklant2 import OpenKlantClient
+.. code-block:: bash
 
-client = OpenKlantClient(api_root="https://openklant.maykin.nl/klantinteracties", token="your_api_token")
+    pip install open-klant-client
 
->>> partijen = client.Partij.list()
->>> partijen
-{
-  "count": 2,
-  "next": null,
-  "previous": null,
-  "results": [
-    {
-      "uuid": "cfc8be25-3773-43b6-b394-455b7027b4c1",
-      "url": "http://localhost:8338/klantinteracties/api/v1/partijen/cfc8be25-3773-43b6-b394-455b7027b4c1",
-      "nummer": "0000000002",
-      "soortPartij": "organisatie",
-      "partijIdentificatie": {
-        "naam": "Test Organisatie"
-      }
-    },
-    {
-      "uuid": "2a229e4e-f972-4ae5-a786-2dd21ed453d7",
-      "url": "http://localhost:8338/klantinteracties/api/v1/partijen/2a229e4e-f972-4ae5-a786-2dd21ed453d7",
-      "nummer": "0000000001",
-      "soortPartij": "persoon",
-      "partijIdentificatie": {
-        "contactnaam": {
-          "voorletters": "Dr.",
-          "voornaam": "Test Persoon",
-          "voorvoegselAchternaam": "Mrs.",
-          "achternaam": "Gamble"
+Usage
+=====
+
+Initialize the client with your API endpoint and token:
+
+.. code-block:: python
+
+    from openklant_client import OpenKlantClient
+
+    client = OpenKlantClient(
+        base_url="https://example.com/klantinteracties/api/v1",
+        token="your_api_token"
+    )
+
+List resources
+--------------
+
+.. code-block:: python
+
+    # List all partijen
+    partijen = client.partij.list()
+
+    # List klantcontacten with filters
+    contacten = client.klant_contact.list(params={"onderwerp": "vraag"})
+
+    # Auto-paginate through all results (max_requests=None means paginate until all rows are retrieved)
+    for partij in client.partij.list_iter(max_requests=10):
+        print(partij)
+
+Get a specific resource
+-----------------------
+
+.. code-block:: python
+
+    # Get a partij by UUID
+    partij = client.partij.get(uuid="123e4567-e89b-12d3-a456-426614174000")
+
+Create a resource
+-----------------
+
+.. code-block:: python
+
+    # Create a new actor
+    actor = client.actor.create(
+        data={
+            "naam": "John Doe",
+            "soortActor": "medewerker",
+            "indicatieActief": True,
+            "actoridentificator": {
+                "objectId": "123456",
+                "codeObjecttype": "employee",
+                "codeRegister": "hr",
+                "codeSoortObjectId": "id",
+            },
         }
-      }
-    }
-  ]
-}
-```
-
-## Testing
-
-### Re-recording VCR cassettes
-
-The tests rely on VCR cassettes which are included in the repo. To dynamically create
-an OpenKlant service and run the tests against it, run the following command:
-
-```bash
-$ cd src/openklant2
-$ ./regenerate_vcr_fixtures.sh
-```
+    )
