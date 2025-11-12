@@ -174,7 +174,7 @@ class OpenKlantServiceManager:
     def client_factory(self):
         return OpenKlantClient(
             base_url=self.api_url,
-            request_kwargs={"headers": {"Authorization": f"Token {self._api_token}"}},
+            token=self._api_token,
         )
 
     def clean_state(self):

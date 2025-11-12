@@ -25,8 +25,16 @@ class OpenKlantClient(APIClient):
     def __init__(
         self,
         base_url: str,
+        *,
+        token: str,
         request_kwargs: dict[str, Any] | None = None,
     ):
+        if request_kwargs is None:
+            request_kwargs = {}
+        if "headers" not in request_kwargs:
+            request_kwargs["headers"] = {}
+        request_kwargs["headers"]["Authorization"] = f"Token {token}"
+
         super().__init__(base_url=base_url, request_kwargs=request_kwargs)
 
         self.partij = PartijResource(self)
