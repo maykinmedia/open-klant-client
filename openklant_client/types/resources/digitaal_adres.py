@@ -24,6 +24,13 @@ class DigitaalAdresCreateData(TypedDict):
 class ListDigitaalAdresParams(TypedDict):
     page: NotRequired[int]
     verstrektDoorPartij__uuid: NotRequired[str]
+    verstrektDoorPartij__partijIdentificator__codeObjecttype: NotRequired[str]
+    verstrektDoorPartij__partijIdentificator__codeRegister: NotRequired[str]
+    verstrektDoorPartij__partijIdentificator__codeSoortObjectId: NotRequired[str]
+    verstrektDoorPartij__partijIdentificator__objectId: NotRequired[str]
+    verstrektDoorPartij__soortPartij: NotRequired[
+        Literal["organisatie", "persoon", "contactpersoon"]
+    ]
     verstrektDoorBetrokkene__uuid: NotRequired[str]
 
 
