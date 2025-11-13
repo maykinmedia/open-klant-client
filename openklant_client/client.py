@@ -1,6 +1,7 @@
 from typing import Any
 
 from ape_pie import APIClient
+from ape_pie.typing import ConfigAdapter
 
 from openklant_client._resources.actor import ActorResource
 from openklant_client._resources.betrokkene import BetrokkeneResource
@@ -28,6 +29,7 @@ class OpenKlantClient(APIClient):
         *,
         token: str | None = None,
         request_kwargs: dict[str, Any] | None = None,
+        **kwargs: Any,
     ):
         if request_kwargs is None:
             request_kwargs = {}
@@ -46,3 +48,9 @@ class OpenKlantClient(APIClient):
         self.actor = ActorResource(self)
         self.interne_taak = InterneTaakResource(self)
         self.betrokkene = BetrokkeneResource(self)
+
+    @classmethod
+    def configure_from(cls, adapter: ConfigAdapter, **kwargs):
+        base_url = adapter.get_client_base_url()
+        session_kwargs = adapter.get_client_session_kwargs()
+        return cls(base_url, request_kwargs=session_kwargs, **kwargs)
