@@ -26,14 +26,15 @@ class OpenKlantClient(APIClient):
         self,
         base_url: str,
         *,
-        token: str,
+        token: str | None = None,
         request_kwargs: dict[str, Any] | None = None,
     ):
         if request_kwargs is None:
             request_kwargs = {}
         if "headers" not in request_kwargs:
             request_kwargs["headers"] = {}
-        request_kwargs["headers"]["Authorization"] = f"Token {token}"
+        if token:
+            request_kwargs["headers"]["Authorization"] = f"Token {token}"
 
         super().__init__(base_url=base_url, request_kwargs=request_kwargs)
 
