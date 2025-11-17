@@ -16,6 +16,11 @@ class DigitaalAdresResource(ResourceMixin):
     http_client: APIClient
     base_path: str = "digitaleadressen"
 
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+
+        self.list_iter = self._make_list_iter(self.list)
+
     def list(
         self, *, params: ListDigitaalAdresParams | None = None
     ) -> PaginatedResponseBody[DigitaalAdres]:
