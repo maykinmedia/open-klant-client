@@ -14,15 +14,18 @@ class CreateContactnaam(TypedDict):
     achternaam: str
 
 
-class BetrokkeneCreateData(TypedDict):
-    wasPartij: ForeignKeyRef | None
-    hadKlantcontact: ForeignKeyRef | None
+class BetrokkeneBaseCreateData(TypedDict):
+    wasPartij: NotRequired[ForeignKeyRef | None]
     bezoekadres: NotRequired[Adres]
     correspondentieadres: NotRequired[Adres]
     contactnaam: NotRequired[CreateContactnaam | None]
     rol: BetrokkeneRol
     organisatienaam: str
     initiator: bool
+
+
+class BetrokkeneCreateData(BetrokkeneBaseCreateData):
+    hadKlantcontact: ForeignKeyRef
 
 
 class Betrokkene(TypedDict):

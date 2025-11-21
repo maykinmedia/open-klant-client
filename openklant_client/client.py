@@ -8,6 +8,7 @@ from openklant_client._resources.betrokkene import BetrokkeneResource
 from openklant_client._resources.digitaal_adres import DigitaalAdresResource
 from openklant_client._resources.interne_taak import InterneTaakResource
 from openklant_client._resources.klant_contact import KlantContactResource
+from openklant_client._resources.maak_klant_contact import MaakKlantContactResource
 from openklant_client._resources.onderwerp_object import OnderwerpObjectResource
 from openklant_client._resources.partij import PartijResource
 from openklant_client._resources.partij_identificator import PartijIdentificatorResource
@@ -22,6 +23,7 @@ class OpenKlantClient(APIClient):
     actor: ActorResource
     interne_taak: InterneTaakResource
     betrokkene: BetrokkeneResource
+    maak_klant_contact: MaakKlantContactResource
 
     def __init__(
         self,
@@ -48,6 +50,7 @@ class OpenKlantClient(APIClient):
         self.actor = ActorResource(self)
         self.interne_taak = InterneTaakResource(self)
         self.betrokkene = BetrokkeneResource(self)
+        self.maak_klant_contact = MaakKlantContactResource(self)
 
     @classmethod
     def configure_from(cls, adapter: ConfigAdapter, **kwargs):
