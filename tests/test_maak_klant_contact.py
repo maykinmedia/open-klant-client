@@ -2,7 +2,7 @@ import pytest
 
 from tests.validators import (
     MaakKlantContactCreateDataValidator,
-    MaakKlantContactValidator,
+    MaakKlantContactResponseValidator,
 )
 
 
@@ -32,6 +32,6 @@ def test_create_klant_contact(client) -> None:
             },
         }
     )
-    resp = client.maak_klant_contact.create(data=data)
+    resp = client.methods.maak_klant_contact(data=data)
 
-    MaakKlantContactValidator.validate_python(resp)
+    MaakKlantContactResponseValidator.validate_python(resp)

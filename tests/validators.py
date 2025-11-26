@@ -8,6 +8,10 @@ the expected TypedDict schemas.
 
 from pydantic import TypeAdapter
 
+from openklant_client.types.methods.maak_klant_contact import (
+    MaakKlantContactCreateData,
+    MaakKlantContactResponse,
+)
 from openklant_client.types.resources.actor import Actor, CreateActorData
 from openklant_client.types.resources.betrokkene import Betrokkene, BetrokkeneCreateData
 from openklant_client.types.resources.digitaal_adres import (
@@ -21,10 +25,6 @@ from openklant_client.types.resources.interne_taak import (
 from openklant_client.types.resources.klant_contact import (
     CreateKlantContactData,
     KlantContact,
-)
-from openklant_client.types.resources.maak_klant_contact import (
-    MaakKlantContact,
-    MaakKlantContactCreateData,
 )
 from openklant_client.types.resources.onderwerp_object import (
     CreateOnderwerpObjectData,
@@ -76,5 +76,5 @@ PartijIdentificatorValidator = TypeAdapter(PartijIdentificator)
 CreatePartijIdentificatorDataValidator = TypeAdapter(CreatePartijIdentificatorData)
 
 #  Maak Klant Contact validators
-MaakKlantContactValidator = TypeAdapter(MaakKlantContact)
+MaakKlantContactResponseValidator = TypeAdapter(MaakKlantContactResponse)
 MaakKlantContactCreateDataValidator = TypeAdapter(MaakKlantContactCreateData)
