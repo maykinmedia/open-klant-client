@@ -239,3 +239,15 @@ class ResourceMixin:
             return self._paginator(f(*args, **kwargs))
 
         return inner
+
+
+class ConvenienceMethodMixin(ResourceMixin):
+    http_client: APIClient
+
+    def __init__(self, http_client: APIClient):
+        self.http_client = http_client
+
+    def __call__(self):
+        raise NotImplementedError(
+            "You must implement the _call__ method to invoke the convenience method"
+        )

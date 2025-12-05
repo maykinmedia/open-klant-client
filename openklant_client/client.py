@@ -1,8 +1,12 @@
+from dataclasses import dataclass
 from typing import Any
 
 from ape_pie import APIClient
 from ape_pie.typing import ConfigAdapter
 
+from openklant_client._methods.maak_klant_contact import (
+    MaakKlantContactConvenienceMethod,
+)
 from openklant_client._resources.actor import ActorResource
 from openklant_client._resources.betrokkene import BetrokkeneResource
 from openklant_client._resources.digitaal_adres import DigitaalAdresResource
@@ -11,6 +15,13 @@ from openklant_client._resources.klant_contact import KlantContactResource
 from openklant_client._resources.onderwerp_object import OnderwerpObjectResource
 from openklant_client._resources.partij import PartijResource
 from openklant_client._resources.partij_identificator import PartijIdentificatorResource
+
+
+@dataclass
+class ConvenienceMethods:
+    """Container for non-resource centric, convenience method endpoints."""
+
+    maak_klant_contact: MaakKlantContactConvenienceMethod
 
 
 class OpenKlantClient(APIClient):
@@ -22,6 +33,7 @@ class OpenKlantClient(APIClient):
     actor: ActorResource
     interne_taak: InterneTaakResource
     betrokkene: BetrokkeneResource
+    methods: ConvenienceMethods
 
     def __init__(
         self,
@@ -48,6 +60,9 @@ class OpenKlantClient(APIClient):
         self.actor = ActorResource(self)
         self.interne_taak = InterneTaakResource(self)
         self.betrokkene = BetrokkeneResource(self)
+        self.methods = ConvenienceMethods(
+            maak_klant_contact=MaakKlantContactConvenienceMethod(self)
+        )
 
     @classmethod
     def configure_from(cls, adapter: ConfigAdapter, **kwargs):

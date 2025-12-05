@@ -12,15 +12,13 @@ class OnderwerpObjectIdentificator(TypedDict):
     codeSoortObjectId: str
 
 
-class BetrokkeneBase(TypedDict):
-    uuid: str
-    url: str
-
-
-class CreateOnderwerpObjectData(TypedDict):
-    wasKlantcontact: ForeignKeyRef | None
-    klantcontact: ForeignKeyRef | None
+class OnderwerpObjectBaseCreateData(TypedDict):
+    wasKlantcontact: NotRequired[ForeignKeyRef | None]
     onderwerpobjectidentificator: NotRequired[OnderwerpObjectIdentificator | None]
+
+
+class CreateOnderwerpObjectData(OnderwerpObjectBaseCreateData):
+    klantcontact: NotRequired[ForeignKeyRef | None]
 
 
 class OnderwerpObject(TypedDict):
