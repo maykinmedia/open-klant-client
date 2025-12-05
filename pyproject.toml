@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "open-klant-client"
-version = "0.2.0"
+version = "0.3.0"
 description = "API Client library to communicate with the Open Klant service."
 authors = [
     {name = "Maykin Media", email = "support@maykinmedia.nl"}
@@ -66,7 +66,7 @@ markers = [
 ]
 
 [tool.bumpversion]
-current_version = "0.2.0"
+current_version = "0.3.0"
 files = [
     {filename = "pyproject.toml"},
     {filename = "README.rst"},
