@@ -21,6 +21,15 @@ class DigitaalAdresCreateData(TypedDict):
     isStandaardAdres: NotRequired[bool]
 
 
+class DigitaalAdresPartialUpdateData(TypedDict):
+    verstrektDoorBetrokkene: NotRequired[ForeignKeyRef | None]
+    verstrektDoorPartij: NotRequired[ForeignKeyRef | None]
+    adres: NotRequired[str]
+    omschrijving: NotRequired[str]
+    soortDigitaalAdres: NotRequired[SoortDigitaalAdres]
+    isStandaardAdres: NotRequired[bool]
+
+
 class ListDigitaalAdresParams(TypedDict):
     page: NotRequired[int]
     verstrektDoorPartij__uuid: NotRequired[str]
@@ -32,6 +41,8 @@ class ListDigitaalAdresParams(TypedDict):
         Literal["organisatie", "persoon", "contactpersoon"]
     ]
     verstrektDoorBetrokkene__uuid: NotRequired[str]
+    adres: NotRequired[str]
+    soortDigitaalAdres: NotRequired[SoortDigitaalAdres]
 
 
 #

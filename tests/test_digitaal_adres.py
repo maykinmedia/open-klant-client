@@ -55,3 +55,23 @@ def test_list_digitaal_adres(client) -> None:
 def test_retrieve_digitaal_adres(client, een_digitaal_adres) -> None:
     resp = client.digitaal_adres.retrieve(een_digitaal_adres["uuid"])
     TypeAdapter(DigitaalAdres).validate_python(resp)
+
+
+@pytest.mark.vcr
+def test_partial_update(client, een_digitaal_adres):
+    target_is_standaard_adres = True
+    target_omschrijving = "New description"
+    assert een_digitaal_adres["isStandaardAdres"] != target_is_standaard_adres
+    assert een_digitaal_adres["omschrijving"] != target_omschrijving
+
+    resp = client.digitaal_adres.partial_update(
+        een_digitaal_adres["uuid"],
+        data={
+            "isStandaardAdres": target_is_standaard_adres,
+            "omschrijving": target_omschrijving,
+        },
+    )
+
+    TypeAdapter(DigitaalAdres).validate_python(resp)
+    assert resp["isStandaardAdres"] == target_is_standaard_adres
+    assert resp["omschrijving"] == target_omschrijving
