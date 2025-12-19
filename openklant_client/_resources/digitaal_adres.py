@@ -9,6 +9,7 @@ from openklant_client.types.resources.digitaal_adres import (
     DigitaalAdres,
     DigitaalAdresCreateData,
     ListDigitaalAdresParams,
+    DigitaalAdresPartialUpdateData
 )
 
 
@@ -43,3 +44,9 @@ class DigitaalAdresResource(ResourceMixin):
 
     def delete(self, /, uuid: str):
         return self._delete(f"{self.base_path}/{str(uuid)}")
+
+    def partial_update(
+        self, /, uuid: str,  *, data: DigitaalAdresPartialUpdateData
+    ) -> DigitaalAdres:
+        response = self._patch(f"{self.base_path}/{str(uuid)}", data=data)
+        return cast(DigitaalAdres, self.process_response(response))
