@@ -2,6 +2,12 @@
 Changelog
 =========
 
+0.4.0 (2025-12-19)
+==================
+
+* Add 'partial_update' method for the 'DigitaalAdres' resource.
+* Add more query params for the 'DigitaalAdres' resource.
+
 0.3.0 (2025-12-05)
 ==================
 
