@@ -138,7 +138,7 @@ class PartijExpand(TypedDict, total=False):
 
 class Partij(TypedDict):
     uuid: str
-    nummer: str
+    nummer: str | None
     url: str
     interneNotitie: str
     digitaleAdressen: list[ForeignKeyRef]

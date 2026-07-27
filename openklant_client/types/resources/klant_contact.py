@@ -74,8 +74,7 @@ class KlantContact(TypedDict):
     omvatteBijlagen: list[ForeignKeyRef]
     hadBetrokkenen: list[ForeignKeyRef]
     leiddeTotInterneTaken: list[ForeignKeyRef]
-
-    nummer: str
+    nummer: str | None
     kanaal: str
     onderwerp: str
     inhoud: str | None
