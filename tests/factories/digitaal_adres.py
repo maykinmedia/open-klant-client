@@ -33,3 +33,4 @@ class DigitaalAdresCreateDataFactory(factory.Factory):
     )
     verstrektDoorBetrokkene = factory.SubFactory(ForeignKeyRef)
     verstrektDoorPartij = factory.SubFactory(ForeignKeyRef)
+    referentie = factory.Faker("word")

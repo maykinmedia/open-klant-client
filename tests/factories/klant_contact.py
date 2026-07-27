@@ -20,11 +20,13 @@ class CreateKlantContactDataFactory(factory.Factory):
     indicatieContactGelukt = factory.fuzzy.FuzzyChoice((True, False, None))
     vertrouwelijk = factory.fuzzy.FuzzyChoice((True, False))
     plaatsgevondenOp = factory.LazyFunction(
-        lambda: factory.Faker(
-            "date_time_between",
-            start_date="-1y",
-            end_date="now",
+        lambda: (
+            factory.Faker(
+                "date_time_between",
+                start_date="-1y",
+                end_date="now",
+            )
+            .evaluate(None, None, {"locale": None})
+            .isoformat()
         )
-        .evaluate(None, None, {"locale": None})
-        .isoformat()
     )

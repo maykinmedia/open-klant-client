@@ -19,6 +19,7 @@ class DigitaalAdresCreateData(TypedDict):
     omschrijving: str
     soortDigitaalAdres: SoortDigitaalAdres
     isStandaardAdres: NotRequired[bool]
+    referentie: NotRequired[str]
 
 
 class DigitaalAdresPartialUpdateData(TypedDict):
@@ -28,6 +29,7 @@ class DigitaalAdresPartialUpdateData(TypedDict):
     omschrijving: NotRequired[str]
     soortDigitaalAdres: NotRequired[SoortDigitaalAdres]
     isStandaardAdres: NotRequired[bool]
+    referentie: NotRequired[str]
 
 
 class ListDigitaalAdresParams(TypedDict):
@@ -43,6 +45,7 @@ class ListDigitaalAdresParams(TypedDict):
     verstrektDoorBetrokkene__uuid: NotRequired[str]
     adres: NotRequired[str]
     soortDigitaalAdres: NotRequired[SoortDigitaalAdres]
+    referentie: NotRequired[str]
 
 
 #
@@ -59,3 +62,4 @@ class DigitaalAdres(TypedDict):
     omschrijving: str
     soortDigitaalAdres: SoortDigitaalAdres
     isStandaardAdres: bool
+    referentie: str
