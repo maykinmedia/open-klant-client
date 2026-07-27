@@ -14,13 +14,13 @@ from .partij import (
 
 __all__ = [
     "CreateContactnaam",
+    "CreatePartijContactpersoonData",
     "CreatePartijDataBase",
-    "CreatePartijIdentificatiePersoon",
     "CreatePartijIdentificatieContactpersoon",
     "CreatePartijIdentificatieOrganisatie",
-    "CreatePartijPersoonData",
-    "CreatePartijContactpersoonData",
+    "CreatePartijIdentificatiePersoon",
     "CreatePartijOrganisatieData",
+    "CreatePartijPersoonData",
     "Partij",
     "PartijListParams",
     "PartijRetrieveParams",

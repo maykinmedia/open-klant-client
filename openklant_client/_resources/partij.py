@@ -29,7 +29,7 @@ class PartijResource(ResourceMixin):
     def retrieve(
         self, /, uuid: str | uuid.UUID, *, params: PartijRetrieveParams | None = None
     ) -> Partij:
-        response = self._get(f"{self.base_path}/{str(uuid)}", params=params)
+        response = self._get(f"{self.base_path}/{uuid!s}", params=params)
         return cast(Partij, self.process_response(response))
 
     # Partij is polymorphic on "soortPartij", with varying fields for
@@ -66,5 +66,5 @@ class PartijResource(ResourceMixin):
     def partial_update(
         self, /, uuid: str | uuid.UUID, *, data: PartialUpdatePartijData
     ) -> Partij:
-        response = self._patch(f"{self.base_path}/{str(uuid)}", data=data)
+        response = self._patch(f"{self.base_path}/{uuid!s}", data=data)
         return cast(Partij, self.process_response(response))

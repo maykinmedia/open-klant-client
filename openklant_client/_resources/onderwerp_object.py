@@ -25,7 +25,7 @@ class OnderwerpObjectResource(ResourceMixin):
         return cast(OnderwerpObject, self.process_response(response))
 
     def retrieve(self, /, uuid: str | uuid.UUID) -> OnderwerpObject:
-        response = self._get(f"{self.base_path}/{str(uuid)}")
+        response = self._get(f"{self.base_path}/{uuid!s}")
         return cast(OnderwerpObject, self.process_response(response))
 
     def list(

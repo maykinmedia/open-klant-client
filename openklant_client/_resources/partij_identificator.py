@@ -29,7 +29,7 @@ class PartijIdentificatorResource(ResourceMixin):
         )
 
     def retrieve(self, /, uuid: str | uuid.UUID) -> PartijIdentificator:
-        response = self._get(f"{self.base_path}/{str(uuid)}")
+        response = self._get(f"{self.base_path}/{uuid!s}")
         return cast(PartijIdentificator, self.process_response(response))
 
     def create(

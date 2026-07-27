@@ -28,7 +28,7 @@ class DigitaalAdresCreateDataFactory(factory.Factory):
         )
     )
     omschrijving = factory.Faker("word")
-    soortDigitaalAdres = random.choice(  # noqa: S311
+    soortDigitaalAdres = random.choice(
         ["email", "telefoonnummer", "overig"],
     )
     verstrektDoorBetrokkene = factory.SubFactory(ForeignKeyRef)

@@ -25,7 +25,7 @@ class ActorResource(ResourceMixin):
         return cast(Actor, self.process_response(response))
 
     def retrieve(self, /, uuid: str | uuid.UUID) -> Actor:
-        response = self._get(f"{self.base_path}/{str(uuid)}")
+        response = self._get(f"{self.base_path}/{uuid!s}")
         return cast(Actor, self.process_response(response))
 
     def list(

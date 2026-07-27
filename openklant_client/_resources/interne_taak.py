@@ -28,7 +28,7 @@ class InterneTaakResource(ResourceMixin):
         return cast(InterneTaak, self.process_response(response))
 
     def retrieve(self, /, uuid: str | uuid.UUID) -> InterneTaak:
-        response = self._get(f"{self.base_path}/{str(uuid)}")
+        response = self._get(f"{self.base_path}/{uuid!s}")
         return cast(InterneTaak, self.process_response(response))
 
     def list(self) -> PaginatedResponseBody[InterneTaak]:

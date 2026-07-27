@@ -34,7 +34,7 @@ class BetrokkeneResource(ResourceMixin):
         uuid: str | uuid.UUID,
         params: BetrokkeneRetrieveParams | None = None,
     ) -> Betrokkene:
-        response = self._get(f"{self.base_path}/{str(uuid)}")
+        response = self._get(f"{self.base_path}/{uuid!s}")
         return cast(Betrokkene, self.process_response(response))
 
     def list(self) -> PaginatedResponseBody[Betrokkene]:

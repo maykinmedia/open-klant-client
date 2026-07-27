@@ -5,7 +5,7 @@ from .partij import (
 )
 
 __all__ = [
-    "CreatePartijPersoonDataFactory",
-    "CreatePartijOrganisatieDataFactory",
     "CreatePartijContactPersoonDataFactory",
+    "CreatePartijOrganisatieDataFactory",
+    "CreatePartijPersoonDataFactory",
 ]

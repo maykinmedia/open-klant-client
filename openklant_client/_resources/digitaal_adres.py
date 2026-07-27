@@ -31,7 +31,7 @@ class DigitaalAdresResource(ResourceMixin):
         )
 
     def retrieve(self, /, uuid: str | uuid.UUID) -> DigitaalAdres:
-        response = self._get(f"{self.base_path}/{str(uuid)}")
+        response = self._get(f"{self.base_path}/{uuid!s}")
         return cast(DigitaalAdres, self.process_response(response))
 
     def create(
@@ -43,10 +43,10 @@ class DigitaalAdresResource(ResourceMixin):
         return cast(DigitaalAdres, self.process_response(response))
 
     def delete(self, /, uuid: str):
-        return self._delete(f"{self.base_path}/{str(uuid)}")
+        return self._delete(f"{self.base_path}/{uuid!s}")
 
     def partial_update(
         self, /, uuid: str, *, data: DigitaalAdresPartialUpdateData
     ) -> DigitaalAdres:
-        response = self._patch(f"{self.base_path}/{str(uuid)}", data=data)
+        response = self._patch(f"{self.base_path}/{uuid!s}", data=data)
         return cast(DigitaalAdres, self.process_response(response))
