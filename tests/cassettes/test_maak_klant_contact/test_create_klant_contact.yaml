@@ -1,33 +1,35 @@
 interactions:
 - request:
     body: '{"klantcontact": {"kanaal": "contactformulier", "onderwerp": "vraag", "inhoud":
-      "Dit is een vraag", "taal": "nld", "vertrouwelijk": true}}'
+      "Dit is een vraag", "taal": "nld", "vertrouwelijk": true}, "betrokkene": {"rol":
+      "klant", "organisatienaam": "unknown", "initiator": true}, "onderwerpobject":
+      {"onderwerpobjectidentificator": {"objectId": "OF-12345", "codeObjecttype":
+      "form", "codeRegister": "openforms", "codeSoortObjectId": "public_reference"}}}'
     headers:
       Authorization:
       - Token b2eb1da9861da88743d72a3fb4344288fe2cba44
       Content-Length:
-      - '138'
+      - '394'
       Content-Type:
       - application/json
     method: POST
     uri: http://localhost:8338/klantinteracties/api/v1/maak-klantcontact
   response:
     body:
-      string: '{"klantcontact":{"uuid":"e2c6eeae-a899-4258-840b-82dd3cdd4576","url":"http://localhost:8338/klantinteracties/api/v1/klantcontacten/e2c6eeae-a899-4258-840b-82dd3cdd4576","gingOverOnderwerpobjecten":[],"hadBetrokkenActoren":[],"omvatteBijlagen":[],"hadBetrokkenen":[],"leiddeTotInterneTaken":[],"nummer":"0000000001","kanaal":"contactformulier","onderwerp":"vraag","inhoud":"Dit
-        is een vraag","indicatieContactGelukt":null,"taal":"nld","vertrouwelijk":true,"plaatsgevondenOp":"2025-11-21T12:08:44.795383Z"},"betrokkene":null,"onderwerpobject":null}'
+      string: '{"klantcontact":{"uuid":"ec2a9f01-09e8-4e4b-9cb2-469744844c57","url":"http://localhost:8338/klantinteracties/api/v1/klantcontacten/ec2a9f01-09e8-4e4b-9cb2-469744844c57","gingOverOnderwerpobjecten":[{"uuid":"6f3c818a-b9ee-410c-a174-78e6d1204636","url":"http://localhost:8338/klantinteracties/api/v1/onderwerpobjecten/6f3c818a-b9ee-410c-a174-78e6d1204636"}],"hadBetrokkenActoren":[],"omvatteBijlagen":[],"hadBetrokkenen":[{"uuid":"8783d112-2ed1-498e-bc71-3d96bceaff3b","url":"http://localhost:8338/klantinteracties/api/v1/betrokkenen/8783d112-2ed1-498e-bc71-3d96bceaff3b"}],"leiddeTotInterneTaken":[],"nummer":null,"referentienummer":null,"kanaal":"contactformulier","onderwerp":"vraag","inhoud":"Dit
+        is een vraag","reactie":"","indicatieContactGelukt":null,"taal":"nld","vertrouwelijk":true,"plaatsgevondenOp":"2026-07-27T13:19:06.490570Z","metadata":{}},"betrokkene":{"uuid":"8783d112-2ed1-498e-bc71-3d96bceaff3b","url":"http://localhost:8338/klantinteracties/api/v1/betrokkenen/8783d112-2ed1-498e-bc71-3d96bceaff3b","wasPartij":null,"hadKlantcontact":{"uuid":"ec2a9f01-09e8-4e4b-9cb2-469744844c57","url":"http://localhost:8338/klantinteracties/api/v1/klantcontacten/ec2a9f01-09e8-4e4b-9cb2-469744844c57"},"digitaleAdressen":[],"bezoekadres":{"nummeraanduidingId":"","straatnaam":"","huisnummer":null,"huisnummertoevoeging":"","postcode":"","stad":"","adresregel1":"","adresregel2":"","adresregel3":"","land":""},"correspondentieadres":{"nummeraanduidingId":"","straatnaam":"","huisnummer":null,"huisnummertoevoeging":"","postcode":"","stad":"","adresregel1":"","adresregel2":"","adresregel3":"","land":""},"contactnaam":{"voorletters":"","voornaam":"","voorvoegselAchternaam":"","achternaam":""},"volledigeNaam":"","rol":"klant","organisatienaam":"unknown","initiator":true},"onderwerpobject":{"uuid":"6f3c818a-b9ee-410c-a174-78e6d1204636","url":"http://localhost:8338/klantinteracties/api/v1/onderwerpobjecten/6f3c818a-b9ee-410c-a174-78e6d1204636","klantcontact":{"uuid":"ec2a9f01-09e8-4e4b-9cb2-469744844c57","url":"http://localhost:8338/klantinteracties/api/v1/klantcontacten/ec2a9f01-09e8-4e4b-9cb2-469744844c57"},"wasKlantcontact":null,"onderwerpobjectidentificator":{"objectId":"OF-12345","codeObjecttype":"form","codeRegister":"openforms","codeSoortObjectId":"public_reference"}}}'
     headers:
       API-version:
-      - 0.4.1
+      - 0.8.0
       Allow:
       - POST, OPTIONS
       Content-Length:
-      - '546'
+      - '2288'
       Content-Security-Policy:
-      - 'img-src ''self'' data: cdn.redoc.ly; style-src ''self'' ''unsafe-inline''
-        fonts.googleapis.com; form-action ''self''; object-src ''none''; script-src
-        ''self'' ''unsafe-inline''; base-uri ''self''; worker-src ''self'' blob:;
-        frame-src ''self''; font-src ''self'' fonts.gstatic.com; default-src ''self'';
-        frame-ancestors ''none'''
+      - 'form-action ''self''; frame-src ''self''; style-src ''self'' ''unsafe-inline''
+        fonts.googleapis.com; script-src ''self'' ''unsafe-inline''; worker-src ''self''
+        blob:; default-src ''self''; object-src ''none''; img-src ''self'' data: cdn.redoc.ly;
+        base-uri ''self''; font-src ''self'' fonts.gstatic.com; frame-ancestors ''none'''
       Content-Type:
       - application/json
       Cross-Origin-Opener-Policy:

@@ -12,27 +12,22 @@ interactions:
     uri: http://localhost:8338/klantinteracties/api/v1/partijen
   response:
     body:
-      string: '{"type":"http://localhost:8338/ref/fouten/ValidationError/","code":"invalid","title":"Invalid
-        input.","status":400,"detail":"","instance":"urn:uuid:8e8adb46-f1c1-4d4f-8aee-a5d4b200089d","invalidParams":[{"name":"digitaleAdressen","code":"required","reason":"Dit
-        veld is vereist."},{"name":"voorkeursDigitaalAdres","code":"required","reason":"Dit
-        veld is vereist."},{"name":"rekeningnummers","code":"required","reason":"Dit
-        veld is vereist."},{"name":"voorkeursRekeningnummer","code":"required","reason":"Dit
-        veld is vereist."},{"name":"soortPartij","code":"required","reason":"Dit veld
-        is vereist."},{"name":"indicatieActief","code":"required","reason":"Dit veld
-        is vereist."}]}'
+      string: '{"type":"http://localhost:8338/ref/fouten/ValidationError/","code":"invalid","title":"Ongeldige
+        invoerwaarde.","status":400,"detail":"Ongeldige invoerwaarde.","instance":"urn:uuid:21ed66e7-352e-456c-81e7-06844b4f9082","invalidParams":[{"name":"soortPartij","code":"required","reason":"Dit
+        veld is vereist."},{"name":"indicatieActief","code":"required","reason":"Dit
+        veld is vereist."}]}'
     headers:
       API-version:
-      - 0.1.2
+      - 0.8.0
       Allow:
       - GET, POST, HEAD, OPTIONS
       Content-Length:
-      - '678'
+      - '386'
       Content-Security-Policy:
-      - 'frame-ancestors ''none''; frame-src ''self''; worker-src ''self'' blob:;
-        default-src ''self''; font-src ''self'' fonts.gstatic.com; object-src ''none'';
-        img-src ''self'' data: cdn.redoc.ly; base-uri ''self''; style-src ''self''
-        ''unsafe-inline'' fonts.googleapis.com; form-action ''self''; script-src ''self''
-        ''unsafe-inline'''
+      - 'form-action ''self''; frame-src ''self''; style-src ''self'' ''unsafe-inline''
+        fonts.googleapis.com; script-src ''self'' ''unsafe-inline''; worker-src ''self''
+        blob:; default-src ''self''; object-src ''none''; img-src ''self'' data: cdn.redoc.ly;
+        base-uri ''self''; font-src ''self'' fonts.gstatic.com; frame-ancestors ''none'''
       Content-Type:
       - application/json
       Cross-Origin-Opener-Policy:

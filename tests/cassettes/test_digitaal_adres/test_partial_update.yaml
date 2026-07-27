@@ -1,42 +1,41 @@
 interactions:
 - request:
     body: '{"digitaleAdressen": null, "voorkeursDigitaalAdres": null, "rekeningnummers":
-      null, "voorkeursRekeningnummer": null, "indicatieGeheimhouding": true, "indicatieActief":
-      true, "voorkeurstaal": "sio", "soortPartij": "persoon", "partijIdentificatie":
-      {"contactnaam": {"voorletters": "Mx.", "voornaam": "Justin", "voorvoegselAchternaam":
-      "Mr.", "achternaam": "Navarro"}}}'
+      null, "voorkeursRekeningnummer": null, "indicatieGeheimhouding": false, "indicatieActief":
+      true, "voorkeurstaal": "afh", "soortPartij": "persoon", "partijIdentificatie":
+      {"contactnaam": {"voorletters": "Mr.", "voornaam": "Patricia", "voorvoegselAchternaam":
+      "Mr.", "achternaam": "Jones"}}}'
     headers:
       Authorization:
       - Token b2eb1da9861da88743d72a3fb4344288fe2cba44
       Content-Length:
-      - '366'
+      - '367'
       Content-Type:
       - application/json
     method: POST
     uri: http://localhost:8338/klantinteracties/api/v1/partijen
   response:
     body:
-      string: '{"uuid":"1a75079e-b222-42b8-8a4f-7acfb6874a71","url":"http://localhost:8338/klantinteracties/api/v1/partijen/1a75079e-b222-42b8-8a4f-7acfb6874a71","nummer":null,"interneNotitie":"","betrokkenen":[],"categorieRelaties":[],"digitaleAdressen":[],"voorkeursDigitaalAdres":null,"vertegenwoordigden":[],"rekeningnummers":[],"voorkeursRekeningnummer":null,"partijIdentificatoren":[],"soortPartij":"persoon","indicatieGeheimhouding":true,"voorkeurstaal":"sio","indicatieActief":true,"bezoekadres":{"nummeraanduidingId":"","straatnaam":"","huisnummer":null,"huisnummertoevoeging":"","postcode":"","stad":"","adresregel1":"","adresregel2":"","adresregel3":"","land":""},"correspondentieadres":{"nummeraanduidingId":"","straatnaam":"","huisnummer":null,"huisnummertoevoeging":"","postcode":"","stad":"","adresregel1":"","adresregel2":"","adresregel3":"","land":""},"partijIdentificatie":{"contactnaam":{"voorletters":"Mx.","voornaam":"Justin","voorvoegselAchternaam":"Mr.","achternaam":"Navarro"},"volledigeNaam":"Justin
-        Mr. Navarro"}}'
+      string: '{"uuid":"6106513a-e61f-4520-acae-633c0ca683d2","url":"http://localhost:8338/klantinteracties/api/v1/partijen/6106513a-e61f-4520-acae-633c0ca683d2","nummer":null,"interneNotitie":"","betrokkenen":[],"categorieRelaties":[],"digitaleAdressen":[],"voorkeursDigitaalAdres":null,"vertegenwoordigden":[],"rekeningnummers":[],"voorkeursRekeningnummer":null,"partijIdentificatoren":[],"soortPartij":"persoon","indicatieGeheimhouding":false,"voorkeurstaal":"afh","indicatieActief":true,"bezoekadres":{"nummeraanduidingId":"","straatnaam":"","huisnummer":null,"huisnummertoevoeging":"","postcode":"","stad":"","adresregel1":"","adresregel2":"","adresregel3":"","land":""},"correspondentieadres":{"nummeraanduidingId":"","straatnaam":"","huisnummer":null,"huisnummertoevoeging":"","postcode":"","stad":"","adresregel1":"","adresregel2":"","adresregel3":"","land":""},"partijIdentificatie":{"contactnaam":{"voorletters":"Mr.","voornaam":"Patricia","voorvoegselAchternaam":"Mr.","achternaam":"Jones"},"volledigeNaam":"Patricia
+        Mr. Jones"}}'
     headers:
       API-version:
       - 0.8.0
       Allow:
       - GET, POST, HEAD, OPTIONS
       Content-Length:
-      - '1024'
+      - '1025'
       Content-Security-Policy:
-      - 'frame-ancestors ''none''; img-src ''self'' data: cdn.redoc.ly; form-action
-        ''self''; frame-src ''self''; font-src ''self'' fonts.gstatic.com; default-src
-        ''self''; script-src ''self'' ''unsafe-inline''; style-src ''self'' ''unsafe-inline''
-        fonts.googleapis.com; worker-src ''self'' blob:; object-src ''none''; base-uri
-        ''self'''
+      - 'form-action ''self''; frame-src ''self''; style-src ''self'' ''unsafe-inline''
+        fonts.googleapis.com; script-src ''self'' ''unsafe-inline''; worker-src ''self''
+        blob:; default-src ''self''; object-src ''none''; img-src ''self'' data: cdn.redoc.ly;
+        base-uri ''self''; font-src ''self'' fonts.gstatic.com; frame-ancestors ''none'''
       Content-Type:
       - application/json
       Cross-Origin-Opener-Policy:
       - same-origin
       Location:
-      - http://localhost:8338/klantinteracties/api/v1/partijen/1a75079e-b222-42b8-8a4f-7acfb6874a71
+      - http://localhost:8338/klantinteracties/api/v1/partijen/6106513a-e61f-4520-acae-633c0ca683d2
       Referrer-Policy:
       - same-origin
       Vary:
@@ -49,41 +48,40 @@ interactions:
       code: 201
       message: Created
 - request:
-    body: '{"adres": "Aliring 11\n4830SV\nWaaksens", "omschrijving": "much", "soortDigitaalAdres":
-      "overig", "verstrektDoorBetrokkene": null, "verstrektDoorPartij": {"uuid": "1a75079e-b222-42b8-8a4f-7acfb6874a71"},
-      "referentie": "foot"}'
+    body: '{"adres": "Felinesteeg 6\n4035 FN\nBurgwerd", "omschrijving": "budget",
+      "soortDigitaalAdres": "overig", "verstrektDoorBetrokkene": null, "verstrektDoorPartij":
+      {"uuid": "6106513a-e61f-4520-acae-633c0ca683d2"}, "referentie": "ago"}'
     headers:
       Authorization:
       - Token b2eb1da9861da88743d72a3fb4344288fe2cba44
       Content-Length:
-      - '225'
+      - '230'
       Content-Type:
       - application/json
     method: POST
     uri: http://localhost:8338/klantinteracties/api/v1/digitaleadressen
   response:
     body:
-      string: '{"uuid":"8280e927-f4a9-4a44-bf86-4b5fe1e6b829","url":"http://localhost:8338/klantinteracties/api/v1/digitaleadressen/8280e927-f4a9-4a44-bf86-4b5fe1e6b829","verstrektDoorBetrokkene":null,"verstrektDoorPartij":{"uuid":"1a75079e-b222-42b8-8a4f-7acfb6874a71","url":"http://localhost:8338/klantinteracties/api/v1/partijen/1a75079e-b222-42b8-8a4f-7acfb6874a71"},"adres":"Aliring
-        11\n4830SV\nWaaksens","soortDigitaalAdres":"overig","isStandaardAdres":false,"omschrijving":"much","referentie":"foot","verificatieDatum":null}'
+      string: '{"uuid":"cf72f530-27d0-4713-b632-c0378bbbf892","url":"http://localhost:8338/klantinteracties/api/v1/digitaleadressen/cf72f530-27d0-4713-b632-c0378bbbf892","verstrektDoorBetrokkene":null,"verstrektDoorPartij":{"uuid":"6106513a-e61f-4520-acae-633c0ca683d2","url":"http://localhost:8338/klantinteracties/api/v1/partijen/6106513a-e61f-4520-acae-633c0ca683d2"},"adres":"Felinesteeg
+        6\n4035 FN\nBurgwerd","soortDigitaalAdres":"overig","isStandaardAdres":false,"omschrijving":"budget","referentie":"ago","verificatieDatum":null}'
     headers:
       API-version:
       - 0.8.0
       Allow:
       - GET, POST, HEAD, OPTIONS
       Content-Length:
-      - '516'
+      - '521'
       Content-Security-Policy:
-      - 'frame-ancestors ''none''; img-src ''self'' data: cdn.redoc.ly; form-action
-        ''self''; frame-src ''self''; font-src ''self'' fonts.gstatic.com; default-src
-        ''self''; script-src ''self'' ''unsafe-inline''; style-src ''self'' ''unsafe-inline''
-        fonts.googleapis.com; worker-src ''self'' blob:; object-src ''none''; base-uri
-        ''self'''
+      - 'form-action ''self''; frame-src ''self''; style-src ''self'' ''unsafe-inline''
+        fonts.googleapis.com; script-src ''self'' ''unsafe-inline''; worker-src ''self''
+        blob:; default-src ''self''; object-src ''none''; img-src ''self'' data: cdn.redoc.ly;
+        base-uri ''self''; font-src ''self'' fonts.gstatic.com; frame-ancestors ''none'''
       Content-Type:
       - application/json
       Cross-Origin-Opener-Policy:
       - same-origin
       Location:
-      - http://localhost:8338/klantinteracties/api/v1/digitaleadressen/8280e927-f4a9-4a44-bf86-4b5fe1e6b829
+      - http://localhost:8338/klantinteracties/api/v1/digitaleadressen/cf72f530-27d0-4713-b632-c0378bbbf892
       Referrer-Policy:
       - same-origin
       Vary:
@@ -106,11 +104,11 @@ interactions:
       Content-Type:
       - application/json
     method: PATCH
-    uri: http://localhost:8338/klantinteracties/api/v1/digitaleadressen/8280e927-f4a9-4a44-bf86-4b5fe1e6b829
+    uri: http://localhost:8338/klantinteracties/api/v1/digitaleadressen/cf72f530-27d0-4713-b632-c0378bbbf892
   response:
     body:
-      string: '{"uuid":"8280e927-f4a9-4a44-bf86-4b5fe1e6b829","url":"http://localhost:8338/klantinteracties/api/v1/digitaleadressen/8280e927-f4a9-4a44-bf86-4b5fe1e6b829","verstrektDoorBetrokkene":null,"verstrektDoorPartij":{"uuid":"1a75079e-b222-42b8-8a4f-7acfb6874a71","url":"http://localhost:8338/klantinteracties/api/v1/partijen/1a75079e-b222-42b8-8a4f-7acfb6874a71"},"adres":"Aliring
-        11\n4830SV\nWaaksens","soortDigitaalAdres":"overig","isStandaardAdres":true,"omschrijving":"New
+      string: '{"uuid":"cf72f530-27d0-4713-b632-c0378bbbf892","url":"http://localhost:8338/klantinteracties/api/v1/digitaleadressen/cf72f530-27d0-4713-b632-c0378bbbf892","verstrektDoorBetrokkene":null,"verstrektDoorPartij":{"uuid":"6106513a-e61f-4520-acae-633c0ca683d2","url":"http://localhost:8338/klantinteracties/api/v1/partijen/6106513a-e61f-4520-acae-633c0ca683d2"},"adres":"Felinesteeg
+        6\n4035 FN\nBurgwerd","soortDigitaalAdres":"overig","isStandaardAdres":true,"omschrijving":"New
         description","referentie":"portaalvoorkeur","verificatieDatum":null}'
     headers:
       API-version:
@@ -118,13 +116,12 @@ interactions:
       Allow:
       - GET, PUT, PATCH, DELETE, HEAD, OPTIONS
       Content-Length:
-      - '537'
+      - '541'
       Content-Security-Policy:
-      - 'frame-ancestors ''none''; img-src ''self'' data: cdn.redoc.ly; form-action
-        ''self''; frame-src ''self''; font-src ''self'' fonts.gstatic.com; default-src
-        ''self''; script-src ''self'' ''unsafe-inline''; style-src ''self'' ''unsafe-inline''
-        fonts.googleapis.com; worker-src ''self'' blob:; object-src ''none''; base-uri
-        ''self'''
+      - 'form-action ''self''; frame-src ''self''; style-src ''self'' ''unsafe-inline''
+        fonts.googleapis.com; script-src ''self'' ''unsafe-inline''; worker-src ''self''
+        blob:; default-src ''self''; object-src ''none''; img-src ''self'' data: cdn.redoc.ly;
+        base-uri ''self''; font-src ''self'' fonts.gstatic.com; frame-ancestors ''none'''
       Content-Type:
       - application/json
       Cross-Origin-Opener-Policy:

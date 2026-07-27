@@ -1,40 +1,39 @@
 interactions:
 - request:
-    body: '{"nummer": "0000000113", "kanaal": "hotel", "onderwerp": "son", "inhoud":
-      "Recent star let ability sea offer professional.", "taal": "nld", "indicatieContactGelukt":
-      null, "vertrouwelijk": false, "plaatsgevondenOp": "2000-11-04T00:41:37.457815"}'
+    body: '{"nummer": "0000000113", "kanaal": "lose", "onderwerp": "certain", "inhoud":
+      "Ahead money court list minute.", "taal": "nld", "indicatieContactGelukt": false,
+      "vertrouwelijk": false, "plaatsgevondenOp": "2005-12-17T08:03:02.576016"}'
     headers:
       Authorization:
       - Token b2eb1da9861da88743d72a3fb4344288fe2cba44
       Content-Length:
-      - '245'
+      - '232'
       Content-Type:
       - application/json
     method: POST
     uri: http://localhost:8338/klantinteracties/api/v1/klantcontacten
   response:
     body:
-      string: '{"uuid":"2cf180f9-04cf-4485-986e-2da803ca6dc8","url":"http://localhost:8338/klantinteracties/api/v1/klantcontacten/2cf180f9-04cf-4485-986e-2da803ca6dc8","gingOverOnderwerpobjecten":[],"hadBetrokkenActoren":[],"omvatteBijlagen":[],"hadBetrokkenen":[],"leiddeTotInterneTaken":[],"nummer":"0000000113","kanaal":"hotel","onderwerp":"son","inhoud":"Recent
-        star let ability sea offer professional.","indicatieContactGelukt":null,"taal":"nld","vertrouwelijk":false,"plaatsgevondenOp":"2000-11-04T00:41:37.457815Z"}'
+      string: '{"uuid":"f51a2be1-7301-499b-86d9-a77dbee21f89","url":"http://localhost:8338/klantinteracties/api/v1/klantcontacten/f51a2be1-7301-499b-86d9-a77dbee21f89","gingOverOnderwerpobjecten":[],"hadBetrokkenActoren":[],"omvatteBijlagen":[],"hadBetrokkenen":[],"leiddeTotInterneTaken":[],"nummer":"0000000113","referentienummer":null,"kanaal":"lose","onderwerp":"certain","inhoud":"Ahead
+        money court list minute.","reactie":"","indicatieContactGelukt":false,"taal":"nld","vertrouwelijk":false,"plaatsgevondenOp":"2005-12-17T08:03:02.576016Z","metadata":{}}'
     headers:
       API-version:
-      - 0.1.2
+      - 0.8.0
       Allow:
       - GET, POST, HEAD, OPTIONS
       Content-Length:
-      - '507'
+      - '545'
       Content-Security-Policy:
-      - 'frame-ancestors ''none''; frame-src ''self''; worker-src ''self'' blob:;
-        default-src ''self''; font-src ''self'' fonts.gstatic.com; object-src ''none'';
-        img-src ''self'' data: cdn.redoc.ly; base-uri ''self''; style-src ''self''
-        ''unsafe-inline'' fonts.googleapis.com; form-action ''self''; script-src ''self''
-        ''unsafe-inline'''
+      - 'form-action ''self''; frame-src ''self''; style-src ''self'' ''unsafe-inline''
+        fonts.googleapis.com; script-src ''self'' ''unsafe-inline''; worker-src ''self''
+        blob:; default-src ''self''; object-src ''none''; img-src ''self'' data: cdn.redoc.ly;
+        base-uri ''self''; font-src ''self'' fonts.gstatic.com; frame-ancestors ''none'''
       Content-Type:
       - application/json
       Cross-Origin-Opener-Policy:
       - same-origin
       Location:
-      - http://localhost:8338/klantinteracties/api/v1/klantcontacten/2cf180f9-04cf-4485-986e-2da803ca6dc8
+      - http://localhost:8338/klantinteracties/api/v1/klantcontacten/f51a2be1-7301-499b-86d9-a77dbee21f89
       Referrer-Policy:
       - same-origin
       Vary:
@@ -55,21 +54,20 @@ interactions:
     uri: http://localhost:8338/klantinteracties/api/v1/klantcontacten
   response:
     body:
-      string: '{"count":1,"next":null,"previous":null,"results":[{"uuid":"2cf180f9-04cf-4485-986e-2da803ca6dc8","url":"http://localhost:8338/klantinteracties/api/v1/klantcontacten/2cf180f9-04cf-4485-986e-2da803ca6dc8","gingOverOnderwerpobjecten":[],"hadBetrokkenActoren":[],"omvatteBijlagen":[],"hadBetrokkenen":[],"leiddeTotInterneTaken":[],"nummer":"0000000113","kanaal":"hotel","onderwerp":"son","inhoud":"Recent
-        star let ability sea offer professional.","indicatieContactGelukt":null,"taal":"nld","vertrouwelijk":false,"plaatsgevondenOp":"2000-11-04T00:41:37.457815Z","_expand":{}}]}'
+      string: '{"count":1,"next":null,"previous":null,"results":[{"uuid":"f51a2be1-7301-499b-86d9-a77dbee21f89","url":"http://localhost:8338/klantinteracties/api/v1/klantcontacten/f51a2be1-7301-499b-86d9-a77dbee21f89","gingOverOnderwerpobjecten":[],"hadBetrokkenActoren":[],"omvatteBijlagen":[],"hadBetrokkenen":[],"leiddeTotInterneTaken":[],"nummer":"0000000113","referentienummer":null,"kanaal":"lose","onderwerp":"certain","inhoud":"Ahead
+        money court list minute.","reactie":"","indicatieContactGelukt":false,"taal":"nld","vertrouwelijk":false,"plaatsgevondenOp":"2005-12-17T08:03:02.576016Z","metadata":{},"_expand":{}}]}'
     headers:
       API-version:
-      - 0.1.2
+      - 0.8.0
       Allow:
       - GET, POST, HEAD, OPTIONS
       Content-Length:
-      - '572'
+      - '610'
       Content-Security-Policy:
-      - 'frame-ancestors ''none''; frame-src ''self''; worker-src ''self'' blob:;
-        default-src ''self''; font-src ''self'' fonts.gstatic.com; object-src ''none'';
-        img-src ''self'' data: cdn.redoc.ly; base-uri ''self''; style-src ''self''
-        ''unsafe-inline'' fonts.googleapis.com; form-action ''self''; script-src ''self''
-        ''unsafe-inline'''
+      - 'form-action ''self''; frame-src ''self''; style-src ''self'' ''unsafe-inline''
+        fonts.googleapis.com; script-src ''self'' ''unsafe-inline''; worker-src ''self''
+        blob:; default-src ''self''; object-src ''none''; img-src ''self'' data: cdn.redoc.ly;
+        base-uri ''self''; font-src ''self'' fonts.gstatic.com; frame-ancestors ''none'''
       Content-Type:
       - application/json
       Cross-Origin-Opener-Policy:
