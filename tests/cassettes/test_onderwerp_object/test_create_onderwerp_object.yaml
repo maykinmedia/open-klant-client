@@ -1,40 +1,39 @@
 interactions:
 - request:
-    body: '{"nummer": "0000000134", "kanaal": "suddenly", "onderwerp": "bill", "inhoud":
-      "Guess purpose play time expert whether.", "taal": "nld", "indicatieContactGelukt":
-      false, "vertrouwelijk": true, "plaatsgevondenOp": "2021-03-10T15:56:41.240337"}'
+    body: '{"nummer": "0000000134", "kanaal": "himself", "onderwerp": "soldier", "inhoud":
+      "Toward country news new evidence water.", "taal": "nld", "indicatieContactGelukt":
+      false, "vertrouwelijk": false, "plaatsgevondenOp": "2008-05-10T16:05:50.531997"}'
     headers:
       Authorization:
       - Token b2eb1da9861da88743d72a3fb4344288fe2cba44
       Content-Length:
-      - '241'
+      - '244'
       Content-Type:
       - application/json
     method: POST
     uri: http://localhost:8338/klantinteracties/api/v1/klantcontacten
   response:
     body:
-      string: '{"uuid":"18ce9d8b-1f4d-4ed1-a26b-1ffd3b0f7628","url":"http://localhost:8338/klantinteracties/api/v1/klantcontacten/18ce9d8b-1f4d-4ed1-a26b-1ffd3b0f7628","gingOverOnderwerpobjecten":[],"hadBetrokkenActoren":[],"omvatteBijlagen":[],"hadBetrokkenen":[],"leiddeTotInterneTaken":[],"nummer":"0000000134","kanaal":"suddenly","onderwerp":"bill","inhoud":"Guess
-        purpose play time expert whether.","indicatieContactGelukt":false,"taal":"nld","vertrouwelijk":true,"plaatsgevondenOp":"2021-03-10T15:56:41.240337Z"}'
+      string: '{"uuid":"47c0db4b-f378-4905-9965-f7f03cefc2c0","url":"http://localhost:8338/klantinteracties/api/v1/klantcontacten/47c0db4b-f378-4905-9965-f7f03cefc2c0","gingOverOnderwerpobjecten":[],"hadBetrokkenActoren":[],"omvatteBijlagen":[],"hadBetrokkenen":[],"leiddeTotInterneTaken":[],"nummer":"0000000134","referentienummer":null,"kanaal":"himself","onderwerp":"soldier","inhoud":"Toward
+        country news new evidence water.","reactie":"","indicatieContactGelukt":false,"taal":"nld","vertrouwelijk":false,"plaatsgevondenOp":"2008-05-10T16:05:50.531997Z","metadata":{}}'
     headers:
       API-version:
-      - 0.1.2
+      - 0.8.0
       Allow:
       - GET, POST, HEAD, OPTIONS
       Content-Length:
-      - '503'
+      - '557'
       Content-Security-Policy:
-      - 'frame-ancestors ''none''; frame-src ''self''; worker-src ''self'' blob:;
-        default-src ''self''; font-src ''self'' fonts.gstatic.com; object-src ''none'';
-        img-src ''self'' data: cdn.redoc.ly; base-uri ''self''; style-src ''self''
-        ''unsafe-inline'' fonts.googleapis.com; form-action ''self''; script-src ''self''
-        ''unsafe-inline'''
+      - 'form-action ''self''; frame-src ''self''; style-src ''self'' ''unsafe-inline''
+        fonts.googleapis.com; script-src ''self'' ''unsafe-inline''; worker-src ''self''
+        blob:; default-src ''self''; object-src ''none''; img-src ''self'' data: cdn.redoc.ly;
+        base-uri ''self''; font-src ''self'' fonts.gstatic.com; frame-ancestors ''none'''
       Content-Type:
       - application/json
       Cross-Origin-Opener-Policy:
       - same-origin
       Location:
-      - http://localhost:8338/klantinteracties/api/v1/klantcontacten/18ce9d8b-1f4d-4ed1-a26b-1ffd3b0f7628
+      - http://localhost:8338/klantinteracties/api/v1/klantcontacten/47c0db4b-f378-4905-9965-f7f03cefc2c0
       Referrer-Policy:
       - same-origin
       Vary:
@@ -47,41 +46,40 @@ interactions:
       code: 201
       message: Created
 - request:
-    body: '{"nummer": "0000000135", "kanaal": "cover", "onderwerp": "about", "inhoud":
-      "Seven major step message explain leader.", "taal": "nld", "indicatieContactGelukt":
-      true, "vertrouwelijk": false, "plaatsgevondenOp": "1996-02-04T23:39:53.617172"}'
+    body: '{"nummer": "0000000135", "kanaal": "science", "onderwerp": "into", "inhoud":
+      "Away interesting expect activity lot if involve sister.", "taal": "nld", "indicatieContactGelukt":
+      null, "vertrouwelijk": true, "plaatsgevondenOp": "2015-01-05T14:51:12.974174"}'
     headers:
       Authorization:
       - Token b2eb1da9861da88743d72a3fb4344288fe2cba44
       Content-Length:
-      - '240'
+      - '255'
       Content-Type:
       - application/json
     method: POST
     uri: http://localhost:8338/klantinteracties/api/v1/klantcontacten
   response:
     body:
-      string: '{"uuid":"fea87284-0376-42ea-947a-20816cb45b61","url":"http://localhost:8338/klantinteracties/api/v1/klantcontacten/fea87284-0376-42ea-947a-20816cb45b61","gingOverOnderwerpobjecten":[],"hadBetrokkenActoren":[],"omvatteBijlagen":[],"hadBetrokkenen":[],"leiddeTotInterneTaken":[],"nummer":"0000000135","kanaal":"cover","onderwerp":"about","inhoud":"Seven
-        major step message explain leader.","indicatieContactGelukt":true,"taal":"nld","vertrouwelijk":false,"plaatsgevondenOp":"1996-02-04T23:39:53.617172Z"}'
+      string: '{"uuid":"31b7fcbf-b9a6-46b6-b9eb-5d868555cae7","url":"http://localhost:8338/klantinteracties/api/v1/klantcontacten/31b7fcbf-b9a6-46b6-b9eb-5d868555cae7","gingOverOnderwerpobjecten":[],"hadBetrokkenActoren":[],"omvatteBijlagen":[],"hadBetrokkenen":[],"leiddeTotInterneTaken":[],"nummer":"0000000135","referentienummer":null,"kanaal":"science","onderwerp":"into","inhoud":"Away
+        interesting expect activity lot if involve sister.","reactie":"","indicatieContactGelukt":null,"taal":"nld","vertrouwelijk":true,"plaatsgevondenOp":"2015-01-05T14:51:12.974174Z","metadata":{}}'
     headers:
       API-version:
-      - 0.1.2
+      - 0.8.0
       Allow:
       - GET, POST, HEAD, OPTIONS
       Content-Length:
-      - '502'
+      - '568'
       Content-Security-Policy:
-      - 'frame-ancestors ''none''; frame-src ''self''; worker-src ''self'' blob:;
-        default-src ''self''; font-src ''self'' fonts.gstatic.com; object-src ''none'';
-        img-src ''self'' data: cdn.redoc.ly; base-uri ''self''; style-src ''self''
-        ''unsafe-inline'' fonts.googleapis.com; form-action ''self''; script-src ''self''
-        ''unsafe-inline'''
+      - 'form-action ''self''; frame-src ''self''; style-src ''self'' ''unsafe-inline''
+        fonts.googleapis.com; script-src ''self'' ''unsafe-inline''; worker-src ''self''
+        blob:; default-src ''self''; object-src ''none''; img-src ''self'' data: cdn.redoc.ly;
+        base-uri ''self''; font-src ''self'' fonts.gstatic.com; frame-ancestors ''none'''
       Content-Type:
       - application/json
       Cross-Origin-Opener-Policy:
       - same-origin
       Location:
-      - http://localhost:8338/klantinteracties/api/v1/klantcontacten/fea87284-0376-42ea-947a-20816cb45b61
+      - http://localhost:8338/klantinteracties/api/v1/klantcontacten/31b7fcbf-b9a6-46b6-b9eb-5d868555cae7
       Referrer-Policy:
       - same-origin
       Vary:
@@ -94,8 +92,8 @@ interactions:
       code: 201
       message: Created
 - request:
-    body: '{"klantcontact": {"uuid": "18ce9d8b-1f4d-4ed1-a26b-1ffd3b0f7628"}, "wasKlantcontact":
-      {"uuid": "fea87284-0376-42ea-947a-20816cb45b61"}}'
+    body: '{"klantcontact": {"uuid": "47c0db4b-f378-4905-9965-f7f03cefc2c0"}, "wasKlantcontact":
+      {"uuid": "31b7fcbf-b9a6-46b6-b9eb-5d868555cae7"}}'
     headers:
       Authorization:
       - Token b2eb1da9861da88743d72a3fb4344288fe2cba44
@@ -107,26 +105,25 @@ interactions:
     uri: http://localhost:8338/klantinteracties/api/v1/onderwerpobjecten
   response:
     body:
-      string: '{"uuid":"97ea23b8-ec4e-4958-aa77-603ee7f7058b","url":"http://localhost:8338/klantinteracties/api/v1/onderwerpobjecten/97ea23b8-ec4e-4958-aa77-603ee7f7058b","klantcontact":{"uuid":"18ce9d8b-1f4d-4ed1-a26b-1ffd3b0f7628","url":"http://localhost:8338/klantinteracties/api/v1/klantcontacten/18ce9d8b-1f4d-4ed1-a26b-1ffd3b0f7628"},"wasKlantcontact":{"uuid":"fea87284-0376-42ea-947a-20816cb45b61","url":"http://localhost:8338/klantinteracties/api/v1/klantcontacten/fea87284-0376-42ea-947a-20816cb45b61"},"onderwerpobjectidentificator":{"objectId":"","codeObjecttype":"","codeRegister":"","codeSoortObjectId":""}}'
+      string: '{"uuid":"06494677-e63d-4fa2-a74a-9a9d3aa5cbe7","url":"http://localhost:8338/klantinteracties/api/v1/onderwerpobjecten/06494677-e63d-4fa2-a74a-9a9d3aa5cbe7","klantcontact":{"uuid":"47c0db4b-f378-4905-9965-f7f03cefc2c0","url":"http://localhost:8338/klantinteracties/api/v1/klantcontacten/47c0db4b-f378-4905-9965-f7f03cefc2c0"},"wasKlantcontact":{"uuid":"31b7fcbf-b9a6-46b6-b9eb-5d868555cae7","url":"http://localhost:8338/klantinteracties/api/v1/klantcontacten/31b7fcbf-b9a6-46b6-b9eb-5d868555cae7"},"onderwerpobjectidentificator":{"objectId":"","codeObjecttype":"","codeRegister":"","codeSoortObjectId":""}}'
     headers:
       API-version:
-      - 0.1.2
+      - 0.8.0
       Allow:
       - GET, POST, HEAD, OPTIONS
       Content-Length:
       - '605'
       Content-Security-Policy:
-      - 'frame-ancestors ''none''; frame-src ''self''; worker-src ''self'' blob:;
-        default-src ''self''; font-src ''self'' fonts.gstatic.com; object-src ''none'';
-        img-src ''self'' data: cdn.redoc.ly; base-uri ''self''; style-src ''self''
-        ''unsafe-inline'' fonts.googleapis.com; form-action ''self''; script-src ''self''
-        ''unsafe-inline'''
+      - 'form-action ''self''; frame-src ''self''; style-src ''self'' ''unsafe-inline''
+        fonts.googleapis.com; script-src ''self'' ''unsafe-inline''; worker-src ''self''
+        blob:; default-src ''self''; object-src ''none''; img-src ''self'' data: cdn.redoc.ly;
+        base-uri ''self''; font-src ''self'' fonts.gstatic.com; frame-ancestors ''none'''
       Content-Type:
       - application/json
       Cross-Origin-Opener-Policy:
       - same-origin
       Location:
-      - http://localhost:8338/klantinteracties/api/v1/onderwerpobjecten/97ea23b8-ec4e-4958-aa77-603ee7f7058b
+      - http://localhost:8338/klantinteracties/api/v1/onderwerpobjecten/06494677-e63d-4fa2-a74a-9a9d3aa5cbe7
       Referrer-Policy:
       - same-origin
       Vary:

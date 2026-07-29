@@ -1,6 +1,6 @@
 #!/bin/bash
 
-delete_path=$(realpath ./src/openklant_client/tests/cassettes)
+delete_path=$(realpath ./tests/cassettes)
 
 # Display the full path and ask for confirmation
 echo "You are about to recursively delete all VCR cassettes from the following directory:"
@@ -16,6 +16,5 @@ else
     exit 0
 fi
 
-export OPEN_KLANT_IMAGE_TAG="2.7.0"
-echo "Using Open Klant image version $OPEN_KLANT_IMAGE_TAG"
+echo "Recording against: $(docker compose -f docker-compose.yaml config --images | grep open-klant)"
 pytest --with-openklant-service --record-mode=all -vvv

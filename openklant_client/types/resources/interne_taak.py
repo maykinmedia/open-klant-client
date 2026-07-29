@@ -17,7 +17,7 @@ class CreateInterneTaakData(TypedDict):
 class InterneTaak(TypedDict):
     uuid: str
     url: str
-    nummer: str
+    nummer: str | None
     gevraagdeHandeling: str
     aanleidinggevendKlantcontact: FullForeigKeyRef
     toegewezenAanActor: FullForeigKeyRef

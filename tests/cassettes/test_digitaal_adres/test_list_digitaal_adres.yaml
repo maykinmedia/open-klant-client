@@ -2,41 +2,40 @@ interactions:
 - request:
     body: '{"digitaleAdressen": null, "voorkeursDigitaalAdres": null, "rekeningnummers":
       null, "voorkeursRekeningnummer": null, "indicatieGeheimhouding": true, "indicatieActief":
-      true, "voorkeurstaal": "chi", "soortPartij": "persoon", "partijIdentificatie":
-      {"contactnaam": {"voorletters": "Mx.", "voornaam": "Bianca", "voorvoegselAchternaam":
-      "Mrs.", "achternaam": "Burgess"}}}'
+      true, "voorkeurstaal": "sam", "soortPartij": "persoon", "partijIdentificatie":
+      {"contactnaam": {"voorletters": "Ms.", "voornaam": "Cody", "voorvoegselAchternaam":
+      "Dr.", "achternaam": "Flynn"}}}'
     headers:
       Authorization:
       - Token b2eb1da9861da88743d72a3fb4344288fe2cba44
       Content-Length:
-      - '367'
+      - '362'
       Content-Type:
       - application/json
     method: POST
     uri: http://localhost:8338/klantinteracties/api/v1/partijen
   response:
     body:
-      string: '{"uuid":"eb7aab21-818c-4ca0-b704-43d41ca50d81","url":"http://localhost:8338/klantinteracties/api/v1/partijen/eb7aab21-818c-4ca0-b704-43d41ca50d81","nummer":null,"interneNotitie":"","betrokkenen":[],"categorieRelaties":[],"digitaleAdressen":[],"voorkeursDigitaalAdres":null,"vertegenwoordigden":[],"rekeningnummers":[],"voorkeursRekeningnummer":null,"partijIdentificatoren":[],"soortPartij":"persoon","indicatieGeheimhouding":true,"voorkeurstaal":"chi","indicatieActief":true,"bezoekadres":{"nummeraanduidingId":"","straatnaam":"","huisnummer":null,"huisnummertoevoeging":"","postcode":"","stad":"","adresregel1":"","adresregel2":"","adresregel3":"","land":""},"correspondentieadres":{"nummeraanduidingId":"","straatnaam":"","huisnummer":null,"huisnummertoevoeging":"","postcode":"","stad":"","adresregel1":"","adresregel2":"","adresregel3":"","land":""},"partijIdentificatie":{"contactnaam":{"voorletters":"Mx.","voornaam":"Bianca","voorvoegselAchternaam":"Mrs.","achternaam":"Burgess"},"volledigeNaam":"Bianca
-        Mrs. Burgess"}}'
+      string: '{"uuid":"048b0ae6-0691-4c1a-a572-b4823094ebe0","url":"http://localhost:8338/klantinteracties/api/v1/partijen/048b0ae6-0691-4c1a-a572-b4823094ebe0","nummer":null,"interneNotitie":"","betrokkenen":[],"categorieRelaties":[],"digitaleAdressen":[],"voorkeursDigitaalAdres":null,"vertegenwoordigden":[],"rekeningnummers":[],"voorkeursRekeningnummer":null,"partijIdentificatoren":[],"soortPartij":"persoon","indicatieGeheimhouding":true,"voorkeurstaal":"sam","indicatieActief":true,"bezoekadres":{"nummeraanduidingId":"","straatnaam":"","huisnummer":null,"huisnummertoevoeging":"","postcode":"","stad":"","adresregel1":"","adresregel2":"","adresregel3":"","land":""},"correspondentieadres":{"nummeraanduidingId":"","straatnaam":"","huisnummer":null,"huisnummertoevoeging":"","postcode":"","stad":"","adresregel1":"","adresregel2":"","adresregel3":"","land":""},"partijIdentificatie":{"contactnaam":{"voorletters":"Ms.","voornaam":"Cody","voorvoegselAchternaam":"Dr.","achternaam":"Flynn"},"volledigeNaam":"Cody
+        Dr. Flynn"}}'
     headers:
       API-version:
       - 0.8.0
       Allow:
       - GET, POST, HEAD, OPTIONS
       Content-Length:
-      - '1026'
+      - '1016'
       Content-Security-Policy:
-      - 'frame-ancestors ''none''; frame-src ''self''; object-src ''none''; default-src
-        ''self''; form-action ''self''; worker-src ''self'' blob:; style-src ''self''
-        ''unsafe-inline'' fonts.googleapis.com; script-src ''self'' ''unsafe-inline'';
-        img-src ''self'' data: cdn.redoc.ly; font-src ''self'' fonts.gstatic.com;
-        base-uri ''self'''
+      - 'form-action ''self''; frame-src ''self''; style-src ''self'' ''unsafe-inline''
+        fonts.googleapis.com; script-src ''self'' ''unsafe-inline''; worker-src ''self''
+        blob:; default-src ''self''; object-src ''none''; img-src ''self'' data: cdn.redoc.ly;
+        base-uri ''self''; font-src ''self'' fonts.gstatic.com; frame-ancestors ''none'''
       Content-Type:
       - application/json
       Cross-Origin-Opener-Policy:
       - same-origin
       Location:
-      - http://localhost:8338/klantinteracties/api/v1/partijen/eb7aab21-818c-4ca0-b704-43d41ca50d81
+      - http://localhost:8338/klantinteracties/api/v1/partijen/048b0ae6-0691-4c1a-a572-b4823094ebe0
       Referrer-Policy:
       - same-origin
       Vary:
@@ -49,41 +48,40 @@ interactions:
       code: 201
       message: Created
 - request:
-    body: '{"adres": "Kyanosingel 704\n9428AE\nHunsel", "omschrijving": "firm", "soortDigitaalAdres":
-      "overig", "verstrektDoorBetrokkene": null, "verstrektDoorPartij": {"uuid": "eb7aab21-818c-4ca0-b704-43d41ca50d81"},
-      "referentie": "phone"}'
+    body: '{"adres": "Amberweg 01\n9246 TE\nBiervliet", "omschrijving": "who", "soortDigitaalAdres":
+      "overig", "verstrektDoorBetrokkene": null, "verstrektDoorPartij": {"uuid": "048b0ae6-0691-4c1a-a572-b4823094ebe0"},
+      "referentie": "chair"}'
     headers:
       Authorization:
       - Token b2eb1da9861da88743d72a3fb4344288fe2cba44
       Content-Length:
-      - '229'
+      - '228'
       Content-Type:
       - application/json
     method: POST
     uri: http://localhost:8338/klantinteracties/api/v1/digitaleadressen
   response:
     body:
-      string: '{"uuid":"bfd82262-bccd-473f-8469-a6aedf41e7b2","url":"http://localhost:8338/klantinteracties/api/v1/digitaleadressen/bfd82262-bccd-473f-8469-a6aedf41e7b2","verstrektDoorBetrokkene":null,"verstrektDoorPartij":{"uuid":"eb7aab21-818c-4ca0-b704-43d41ca50d81","url":"http://localhost:8338/klantinteracties/api/v1/partijen/eb7aab21-818c-4ca0-b704-43d41ca50d81"},"adres":"Kyanosingel
-        704\n9428AE\nHunsel","soortDigitaalAdres":"overig","isStandaardAdres":false,"omschrijving":"firm","referentie":"phone","verificatieDatum":null}'
+      string: '{"uuid":"c31f650a-b773-413f-99e8-a86d02eeea19","url":"http://localhost:8338/klantinteracties/api/v1/digitaleadressen/c31f650a-b773-413f-99e8-a86d02eeea19","verstrektDoorBetrokkene":null,"verstrektDoorPartij":{"uuid":"048b0ae6-0691-4c1a-a572-b4823094ebe0","url":"http://localhost:8338/klantinteracties/api/v1/partijen/048b0ae6-0691-4c1a-a572-b4823094ebe0"},"adres":"Amberweg
+        01\n9246 TE\nBiervliet","soortDigitaalAdres":"overig","isStandaardAdres":false,"omschrijving":"who","referentie":"chair","verificatieDatum":null}'
     headers:
       API-version:
       - 0.8.0
       Allow:
       - GET, POST, HEAD, OPTIONS
       Content-Length:
-      - '520'
+      - '519'
       Content-Security-Policy:
-      - 'frame-ancestors ''none''; frame-src ''self''; object-src ''none''; default-src
-        ''self''; form-action ''self''; worker-src ''self'' blob:; style-src ''self''
-        ''unsafe-inline'' fonts.googleapis.com; script-src ''self'' ''unsafe-inline'';
-        img-src ''self'' data: cdn.redoc.ly; font-src ''self'' fonts.gstatic.com;
-        base-uri ''self'''
+      - 'form-action ''self''; frame-src ''self''; style-src ''self'' ''unsafe-inline''
+        fonts.googleapis.com; script-src ''self'' ''unsafe-inline''; worker-src ''self''
+        blob:; default-src ''self''; object-src ''none''; img-src ''self'' data: cdn.redoc.ly;
+        base-uri ''self''; font-src ''self'' fonts.gstatic.com; frame-ancestors ''none'''
       Content-Type:
       - application/json
       Cross-Origin-Opener-Policy:
       - same-origin
       Location:
-      - http://localhost:8338/klantinteracties/api/v1/digitaleadressen/bfd82262-bccd-473f-8469-a6aedf41e7b2
+      - http://localhost:8338/klantinteracties/api/v1/digitaleadressen/c31f650a-b773-413f-99e8-a86d02eeea19
       Referrer-Policy:
       - same-origin
       Vary:
@@ -104,21 +102,20 @@ interactions:
     uri: http://localhost:8338/klantinteracties/api/v1/digitaleadressen
   response:
     body:
-      string: '{"count":1,"next":null,"previous":null,"results":[{"uuid":"bfd82262-bccd-473f-8469-a6aedf41e7b2","url":"http://localhost:8338/klantinteracties/api/v1/digitaleadressen/bfd82262-bccd-473f-8469-a6aedf41e7b2","verstrektDoorBetrokkene":null,"verstrektDoorPartij":{"uuid":"eb7aab21-818c-4ca0-b704-43d41ca50d81","url":"http://localhost:8338/klantinteracties/api/v1/partijen/eb7aab21-818c-4ca0-b704-43d41ca50d81"},"adres":"Kyanosingel
-        704\n9428AE\nHunsel","soortDigitaalAdres":"overig","isStandaardAdres":false,"omschrijving":"firm","referentie":"phone","verificatieDatum":null,"_expand":{}}]}'
+      string: '{"count":1,"next":null,"previous":null,"results":[{"uuid":"c31f650a-b773-413f-99e8-a86d02eeea19","url":"http://localhost:8338/klantinteracties/api/v1/digitaleadressen/c31f650a-b773-413f-99e8-a86d02eeea19","verstrektDoorBetrokkene":null,"verstrektDoorPartij":{"uuid":"048b0ae6-0691-4c1a-a572-b4823094ebe0","url":"http://localhost:8338/klantinteracties/api/v1/partijen/048b0ae6-0691-4c1a-a572-b4823094ebe0"},"adres":"Amberweg
+        01\n9246 TE\nBiervliet","soortDigitaalAdres":"overig","isStandaardAdres":false,"omschrijving":"who","referentie":"chair","verificatieDatum":null,"_expand":{}}]}'
     headers:
       API-version:
       - 0.8.0
       Allow:
       - GET, POST, HEAD, OPTIONS
       Content-Length:
-      - '585'
+      - '584'
       Content-Security-Policy:
-      - 'frame-ancestors ''none''; frame-src ''self''; object-src ''none''; default-src
-        ''self''; form-action ''self''; worker-src ''self'' blob:; style-src ''self''
-        ''unsafe-inline'' fonts.googleapis.com; script-src ''self'' ''unsafe-inline'';
-        img-src ''self'' data: cdn.redoc.ly; font-src ''self'' fonts.gstatic.com;
-        base-uri ''self'''
+      - 'form-action ''self''; frame-src ''self''; style-src ''self'' ''unsafe-inline''
+        fonts.googleapis.com; script-src ''self'' ''unsafe-inline''; worker-src ''self''
+        blob:; default-src ''self''; object-src ''none''; img-src ''self'' data: cdn.redoc.ly;
+        base-uri ''self''; font-src ''self'' fonts.gstatic.com; frame-ancestors ''none'''
       Content-Type:
       - application/json
       Cross-Origin-Opener-Policy:

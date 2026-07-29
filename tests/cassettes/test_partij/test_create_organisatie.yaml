@@ -1,8 +1,8 @@
 interactions:
 - request:
-    body: '{"digitaleAdressen": null, "voorkeursDigitaalAdres": null, "rekeningnummers":
-      null, "voorkeursRekeningnummer": null, "voorkeurstaal": "nld", "indicatieActief":
-      true, "indicatieGeheimhouding": false, "soortPartij": "organisatie", "partijIdentificatie":
+    body: '{"soortPartij": "organisatie", "indicatieActief": true, "digitaleAdressen":
+      null, "voorkeursDigitaalAdres": null, "rekeningnummers": null, "voorkeursRekeningnummer":
+      null, "voorkeurstaal": "nld", "indicatieGeheimhouding": false, "partijIdentificatie":
       {"naam": "AcmeCorp Ltd"}}'
     headers:
       Authorization:
@@ -15,27 +15,26 @@ interactions:
     uri: http://localhost:8338/klantinteracties/api/v1/partijen
   response:
     body:
-      string: '{"uuid":"55625d95-76f8-4a02-b3b3-21e1d1961163","url":"http://localhost:8338/klantinteracties/api/v1/partijen/55625d95-76f8-4a02-b3b3-21e1d1961163","nummer":"0000000001","interneNotitie":"","betrokkenen":[],"categorieRelaties":[],"digitaleAdressen":[],"voorkeursDigitaalAdres":null,"vertegenwoordigden":[],"rekeningnummers":[],"voorkeursRekeningnummer":null,"partijIdentificatoren":[],"soortPartij":"organisatie","indicatieGeheimhouding":false,"voorkeurstaal":"nld","indicatieActief":true,"bezoekadres":{"nummeraanduidingId":"","straatnaam":"","huisnummer":null,"huisnummertoevoeging":"","postcode":"","stad":"","adresregel1":"","adresregel2":"","adresregel3":"","land":""},"correspondentieadres":{"nummeraanduidingId":"","straatnaam":"","huisnummer":null,"huisnummertoevoeging":"","postcode":"","stad":"","adresregel1":"","adresregel2":"","adresregel3":"","land":""},"partijIdentificatie":{"naam":"AcmeCorp
+      string: '{"uuid":"c8191258-d2b2-45c8-ab5f-55b0ad504292","url":"http://localhost:8338/klantinteracties/api/v1/partijen/c8191258-d2b2-45c8-ab5f-55b0ad504292","nummer":null,"interneNotitie":"","betrokkenen":[],"categorieRelaties":[],"digitaleAdressen":[],"voorkeursDigitaalAdres":null,"vertegenwoordigden":[],"rekeningnummers":[],"voorkeursRekeningnummer":null,"partijIdentificatoren":[],"soortPartij":"organisatie","indicatieGeheimhouding":false,"voorkeurstaal":"nld","indicatieActief":true,"bezoekadres":{"nummeraanduidingId":"","straatnaam":"","huisnummer":null,"huisnummertoevoeging":"","postcode":"","stad":"","adresregel1":"","adresregel2":"","adresregel3":"","land":""},"correspondentieadres":{"nummeraanduidingId":"","straatnaam":"","huisnummer":null,"huisnummertoevoeging":"","postcode":"","stad":"","adresregel1":"","adresregel2":"","adresregel3":"","land":""},"partijIdentificatie":{"naam":"AcmeCorp
         Ltd"}}'
     headers:
       API-version:
-      - 0.1.2
+      - 0.8.0
       Allow:
       - GET, POST, HEAD, OPTIONS
       Content-Length:
-      - '913'
+      - '905'
       Content-Security-Policy:
-      - 'frame-ancestors ''none''; frame-src ''self''; worker-src ''self'' blob:;
-        default-src ''self''; font-src ''self'' fonts.gstatic.com; object-src ''none'';
-        img-src ''self'' data: cdn.redoc.ly; base-uri ''self''; style-src ''self''
-        ''unsafe-inline'' fonts.googleapis.com; form-action ''self''; script-src ''self''
-        ''unsafe-inline'''
+      - 'form-action ''self''; frame-src ''self''; style-src ''self'' ''unsafe-inline''
+        fonts.googleapis.com; script-src ''self'' ''unsafe-inline''; worker-src ''self''
+        blob:; default-src ''self''; object-src ''none''; img-src ''self'' data: cdn.redoc.ly;
+        base-uri ''self''; font-src ''self'' fonts.gstatic.com; frame-ancestors ''none'''
       Content-Type:
       - application/json
       Cross-Origin-Opener-Policy:
       - same-origin
       Location:
-      - http://localhost:8338/klantinteracties/api/v1/partijen/55625d95-76f8-4a02-b3b3-21e1d1961163
+      - http://localhost:8338/klantinteracties/api/v1/partijen/c8191258-d2b2-45c8-ab5f-55b0ad504292
       Referrer-Policy:
       - same-origin
       Vary:

@@ -1,40 +1,39 @@
 interactions:
 - request:
-    body: '{"nummer": "0000000129", "kanaal": "pass", "onderwerp": "no", "inhoud":
-      "Into direction view attorney capital.", "taal": "nld", "indicatieContactGelukt":
-      false, "vertrouwelijk": true, "plaatsgevondenOp": "2016-01-19T19:41:37.585359"}'
+    body: '{"nummer": "0000000129", "kanaal": "design", "onderwerp": "address", "inhoud":
+      "Law official box nor tell may sort.", "taal": "nld", "indicatieContactGelukt":
+      false, "vertrouwelijk": true, "plaatsgevondenOp": "2014-12-16T10:45:05.879254"}'
     headers:
       Authorization:
       - Token b2eb1da9861da88743d72a3fb4344288fe2cba44
       Content-Length:
-      - '233'
+      - '238'
       Content-Type:
       - application/json
     method: POST
     uri: http://localhost:8338/klantinteracties/api/v1/klantcontacten
   response:
     body:
-      string: '{"uuid":"f9d5776c-5fc6-4116-b81c-823a953d483b","url":"http://localhost:8338/klantinteracties/api/v1/klantcontacten/f9d5776c-5fc6-4116-b81c-823a953d483b","gingOverOnderwerpobjecten":[],"hadBetrokkenActoren":[],"omvatteBijlagen":[],"hadBetrokkenen":[],"leiddeTotInterneTaken":[],"nummer":"0000000129","kanaal":"pass","onderwerp":"no","inhoud":"Into
-        direction view attorney capital.","indicatieContactGelukt":false,"taal":"nld","vertrouwelijk":true,"plaatsgevondenOp":"2016-01-19T19:41:37.585359Z"}'
+      string: '{"uuid":"86ba1e6b-433b-4751-8946-4db77c59d509","url":"http://localhost:8338/klantinteracties/api/v1/klantcontacten/86ba1e6b-433b-4751-8946-4db77c59d509","gingOverOnderwerpobjecten":[],"hadBetrokkenActoren":[],"omvatteBijlagen":[],"hadBetrokkenen":[],"leiddeTotInterneTaken":[],"nummer":"0000000129","referentienummer":null,"kanaal":"design","onderwerp":"address","inhoud":"Law
+        official box nor tell may sort.","reactie":"","indicatieContactGelukt":false,"taal":"nld","vertrouwelijk":true,"plaatsgevondenOp":"2014-12-16T10:45:05.879254Z","metadata":{}}'
     headers:
       API-version:
-      - 0.1.2
+      - 0.8.0
       Allow:
       - GET, POST, HEAD, OPTIONS
       Content-Length:
-      - '495'
+      - '551'
       Content-Security-Policy:
-      - 'frame-ancestors ''none''; frame-src ''self''; worker-src ''self'' blob:;
-        default-src ''self''; font-src ''self'' fonts.gstatic.com; object-src ''none'';
-        img-src ''self'' data: cdn.redoc.ly; base-uri ''self''; style-src ''self''
-        ''unsafe-inline'' fonts.googleapis.com; form-action ''self''; script-src ''self''
-        ''unsafe-inline'''
+      - 'form-action ''self''; frame-src ''self''; style-src ''self'' ''unsafe-inline''
+        fonts.googleapis.com; script-src ''self'' ''unsafe-inline''; worker-src ''self''
+        blob:; default-src ''self''; object-src ''none''; img-src ''self'' data: cdn.redoc.ly;
+        base-uri ''self''; font-src ''self'' fonts.gstatic.com; frame-ancestors ''none'''
       Content-Type:
       - application/json
       Cross-Origin-Opener-Policy:
       - same-origin
       Location:
-      - http://localhost:8338/klantinteracties/api/v1/klantcontacten/f9d5776c-5fc6-4116-b81c-823a953d483b
+      - http://localhost:8338/klantinteracties/api/v1/klantcontacten/86ba1e6b-433b-4751-8946-4db77c59d509
       Referrer-Policy:
       - same-origin
       Vary:
@@ -55,21 +54,20 @@ interactions:
     uri: http://localhost:8338/klantinteracties/api/v1/klantcontacten?page=1&indicatieContactGelukt=FALSE
   response:
     body:
-      string: '{"count":1,"next":null,"previous":null,"results":[{"uuid":"f9d5776c-5fc6-4116-b81c-823a953d483b","url":"http://localhost:8338/klantinteracties/api/v1/klantcontacten/f9d5776c-5fc6-4116-b81c-823a953d483b","gingOverOnderwerpobjecten":[],"hadBetrokkenActoren":[],"omvatteBijlagen":[],"hadBetrokkenen":[],"leiddeTotInterneTaken":[],"nummer":"0000000129","kanaal":"pass","onderwerp":"no","inhoud":"Into
-        direction view attorney capital.","indicatieContactGelukt":false,"taal":"nld","vertrouwelijk":true,"plaatsgevondenOp":"2016-01-19T19:41:37.585359Z","_expand":{}}]}'
+      string: '{"count":1,"next":null,"previous":null,"results":[{"uuid":"86ba1e6b-433b-4751-8946-4db77c59d509","url":"http://localhost:8338/klantinteracties/api/v1/klantcontacten/86ba1e6b-433b-4751-8946-4db77c59d509","gingOverOnderwerpobjecten":[],"hadBetrokkenActoren":[],"omvatteBijlagen":[],"hadBetrokkenen":[],"leiddeTotInterneTaken":[],"nummer":"0000000129","referentienummer":null,"kanaal":"design","onderwerp":"address","inhoud":"Law
+        official box nor tell may sort.","reactie":"","indicatieContactGelukt":false,"taal":"nld","vertrouwelijk":true,"plaatsgevondenOp":"2014-12-16T10:45:05.879254Z","metadata":{},"_expand":{}}]}'
     headers:
       API-version:
-      - 0.1.2
+      - 0.8.0
       Allow:
       - GET, POST, HEAD, OPTIONS
       Content-Length:
-      - '560'
+      - '616'
       Content-Security-Policy:
-      - 'frame-ancestors ''none''; frame-src ''self''; worker-src ''self'' blob:;
-        default-src ''self''; font-src ''self'' fonts.gstatic.com; object-src ''none'';
-        img-src ''self'' data: cdn.redoc.ly; base-uri ''self''; style-src ''self''
-        ''unsafe-inline'' fonts.googleapis.com; form-action ''self''; script-src ''self''
-        ''unsafe-inline'''
+      - 'form-action ''self''; frame-src ''self''; style-src ''self'' ''unsafe-inline''
+        fonts.googleapis.com; script-src ''self'' ''unsafe-inline''; worker-src ''self''
+        blob:; default-src ''self''; object-src ''none''; img-src ''self'' data: cdn.redoc.ly;
+        base-uri ''self''; font-src ''self'' fonts.gstatic.com; frame-ancestors ''none'''
       Content-Type:
       - application/json
       Cross-Origin-Opener-Policy:
@@ -97,17 +95,16 @@ interactions:
       string: '{"count":0,"next":null,"previous":null,"results":[]}'
     headers:
       API-version:
-      - 0.1.2
+      - 0.8.0
       Allow:
       - GET, POST, HEAD, OPTIONS
       Content-Length:
       - '52'
       Content-Security-Policy:
-      - 'frame-ancestors ''none''; frame-src ''self''; worker-src ''self'' blob:;
-        default-src ''self''; font-src ''self'' fonts.gstatic.com; object-src ''none'';
-        img-src ''self'' data: cdn.redoc.ly; base-uri ''self''; style-src ''self''
-        ''unsafe-inline'' fonts.googleapis.com; form-action ''self''; script-src ''self''
-        ''unsafe-inline'''
+      - 'form-action ''self''; frame-src ''self''; style-src ''self'' ''unsafe-inline''
+        fonts.googleapis.com; script-src ''self'' ''unsafe-inline''; worker-src ''self''
+        blob:; default-src ''self''; object-src ''none''; img-src ''self'' data: cdn.redoc.ly;
+        base-uri ''self''; font-src ''self'' fonts.gstatic.com; frame-ancestors ''none'''
       Content-Type:
       - application/json
       Cross-Origin-Opener-Policy:

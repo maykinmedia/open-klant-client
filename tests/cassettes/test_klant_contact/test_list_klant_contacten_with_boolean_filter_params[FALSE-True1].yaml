@@ -1,40 +1,40 @@
 interactions:
 - request:
-    body: '{"nummer": "0000000127", "kanaal": "question", "onderwerp": "space", "inhoud":
-      "Election every news.", "taal": "nld", "indicatieContactGelukt": false, "vertrouwelijk":
-      true, "plaatsgevondenOp": "1998-02-21T19:21:29.348104"}'
+    body: '{"nummer": "0000000127", "kanaal": "organization", "onderwerp": "top",
+      "inhoud": "Congress environmental source agree special writer book.", "taal":
+      "nld", "indicatieContactGelukt": false, "vertrouwelijk": true, "plaatsgevondenOp":
+      "2011-07-20T00:02:18.107410"}'
     headers:
       Authorization:
       - Token b2eb1da9861da88743d72a3fb4344288fe2cba44
       Content-Length:
-      - '223'
+      - '261'
       Content-Type:
       - application/json
     method: POST
     uri: http://localhost:8338/klantinteracties/api/v1/klantcontacten
   response:
     body:
-      string: '{"uuid":"d82c4fc5-982e-4606-a82b-1352503cac43","url":"http://localhost:8338/klantinteracties/api/v1/klantcontacten/d82c4fc5-982e-4606-a82b-1352503cac43","gingOverOnderwerpobjecten":[],"hadBetrokkenActoren":[],"omvatteBijlagen":[],"hadBetrokkenen":[],"leiddeTotInterneTaken":[],"nummer":"0000000127","kanaal":"question","onderwerp":"space","inhoud":"Election
-        every news.","indicatieContactGelukt":false,"taal":"nld","vertrouwelijk":true,"plaatsgevondenOp":"1998-02-21T19:21:29.348104Z"}'
+      string: '{"uuid":"b46a4a2e-33b3-4033-8a9d-6320863f1683","url":"http://localhost:8338/klantinteracties/api/v1/klantcontacten/b46a4a2e-33b3-4033-8a9d-6320863f1683","gingOverOnderwerpobjecten":[],"hadBetrokkenActoren":[],"omvatteBijlagen":[],"hadBetrokkenen":[],"leiddeTotInterneTaken":[],"nummer":"0000000127","referentienummer":null,"kanaal":"organization","onderwerp":"top","inhoud":"Congress
+        environmental source agree special writer book.","reactie":"","indicatieContactGelukt":false,"taal":"nld","vertrouwelijk":true,"plaatsgevondenOp":"2011-07-20T00:02:18.107410Z","metadata":{}}'
     headers:
       API-version:
-      - 0.1.2
+      - 0.8.0
       Allow:
       - GET, POST, HEAD, OPTIONS
       Content-Length:
-      - '485'
+      - '574'
       Content-Security-Policy:
-      - 'frame-ancestors ''none''; frame-src ''self''; worker-src ''self'' blob:;
-        default-src ''self''; font-src ''self'' fonts.gstatic.com; object-src ''none'';
-        img-src ''self'' data: cdn.redoc.ly; base-uri ''self''; style-src ''self''
-        ''unsafe-inline'' fonts.googleapis.com; form-action ''self''; script-src ''self''
-        ''unsafe-inline'''
+      - 'form-action ''self''; frame-src ''self''; style-src ''self'' ''unsafe-inline''
+        fonts.googleapis.com; script-src ''self'' ''unsafe-inline''; worker-src ''self''
+        blob:; default-src ''self''; object-src ''none''; img-src ''self'' data: cdn.redoc.ly;
+        base-uri ''self''; font-src ''self'' fonts.gstatic.com; frame-ancestors ''none'''
       Content-Type:
       - application/json
       Cross-Origin-Opener-Policy:
       - same-origin
       Location:
-      - http://localhost:8338/klantinteracties/api/v1/klantcontacten/d82c4fc5-982e-4606-a82b-1352503cac43
+      - http://localhost:8338/klantinteracties/api/v1/klantcontacten/b46a4a2e-33b3-4033-8a9d-6320863f1683
       Referrer-Policy:
       - same-origin
       Vary:
@@ -55,21 +55,20 @@ interactions:
     uri: http://localhost:8338/klantinteracties/api/v1/klantcontacten?page=1&indicatieContactGelukt=FALSE
   response:
     body:
-      string: '{"count":1,"next":null,"previous":null,"results":[{"uuid":"d82c4fc5-982e-4606-a82b-1352503cac43","url":"http://localhost:8338/klantinteracties/api/v1/klantcontacten/d82c4fc5-982e-4606-a82b-1352503cac43","gingOverOnderwerpobjecten":[],"hadBetrokkenActoren":[],"omvatteBijlagen":[],"hadBetrokkenen":[],"leiddeTotInterneTaken":[],"nummer":"0000000127","kanaal":"question","onderwerp":"space","inhoud":"Election
-        every news.","indicatieContactGelukt":false,"taal":"nld","vertrouwelijk":true,"plaatsgevondenOp":"1998-02-21T19:21:29.348104Z","_expand":{}}]}'
+      string: '{"count":1,"next":null,"previous":null,"results":[{"uuid":"b46a4a2e-33b3-4033-8a9d-6320863f1683","url":"http://localhost:8338/klantinteracties/api/v1/klantcontacten/b46a4a2e-33b3-4033-8a9d-6320863f1683","gingOverOnderwerpobjecten":[],"hadBetrokkenActoren":[],"omvatteBijlagen":[],"hadBetrokkenen":[],"leiddeTotInterneTaken":[],"nummer":"0000000127","referentienummer":null,"kanaal":"organization","onderwerp":"top","inhoud":"Congress
+        environmental source agree special writer book.","reactie":"","indicatieContactGelukt":false,"taal":"nld","vertrouwelijk":true,"plaatsgevondenOp":"2011-07-20T00:02:18.107410Z","metadata":{},"_expand":{}}]}'
     headers:
       API-version:
-      - 0.1.2
+      - 0.8.0
       Allow:
       - GET, POST, HEAD, OPTIONS
       Content-Length:
-      - '550'
+      - '639'
       Content-Security-Policy:
-      - 'frame-ancestors ''none''; frame-src ''self''; worker-src ''self'' blob:;
-        default-src ''self''; font-src ''self'' fonts.gstatic.com; object-src ''none'';
-        img-src ''self'' data: cdn.redoc.ly; base-uri ''self''; style-src ''self''
-        ''unsafe-inline'' fonts.googleapis.com; form-action ''self''; script-src ''self''
-        ''unsafe-inline'''
+      - 'form-action ''self''; frame-src ''self''; style-src ''self'' ''unsafe-inline''
+        fonts.googleapis.com; script-src ''self'' ''unsafe-inline''; worker-src ''self''
+        blob:; default-src ''self''; object-src ''none''; img-src ''self'' data: cdn.redoc.ly;
+        base-uri ''self''; font-src ''self'' fonts.gstatic.com; frame-ancestors ''none'''
       Content-Type:
       - application/json
       Cross-Origin-Opener-Policy:
@@ -97,17 +96,16 @@ interactions:
       string: '{"count":0,"next":null,"previous":null,"results":[]}'
     headers:
       API-version:
-      - 0.1.2
+      - 0.8.0
       Allow:
       - GET, POST, HEAD, OPTIONS
       Content-Length:
       - '52'
       Content-Security-Policy:
-      - 'frame-ancestors ''none''; frame-src ''self''; worker-src ''self'' blob:;
-        default-src ''self''; font-src ''self'' fonts.gstatic.com; object-src ''none'';
-        img-src ''self'' data: cdn.redoc.ly; base-uri ''self''; style-src ''self''
-        ''unsafe-inline'' fonts.googleapis.com; form-action ''self''; script-src ''self''
-        ''unsafe-inline'''
+      - 'form-action ''self''; frame-src ''self''; style-src ''self'' ''unsafe-inline''
+        fonts.googleapis.com; script-src ''self'' ''unsafe-inline''; worker-src ''self''
+        blob:; default-src ''self''; object-src ''none''; img-src ''self'' data: cdn.redoc.ly;
+        base-uri ''self''; font-src ''self'' fonts.gstatic.com; frame-ancestors ''none'''
       Content-Type:
       - application/json
       Cross-Origin-Opener-Policy:

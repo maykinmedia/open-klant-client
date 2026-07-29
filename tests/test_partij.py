@@ -201,28 +201,8 @@ def test_create_with_bad_request_exception(client):
     want = (
         400,
         "invalid",
-        "Invalid input.",
+        "Ongeldige invoerwaarde.",
         [
-            {
-                "name": "digitaleAdressen",
-                "code": "required",
-                "reason": "Dit veld is vereist.",
-            },
-            {
-                "name": "voorkeursDigitaalAdres",
-                "code": "required",
-                "reason": "Dit veld is vereist.",
-            },
-            {
-                "name": "rekeningnummers",
-                "code": "required",
-                "reason": "Dit veld is vereist.",
-            },
-            {
-                "name": "voorkeursRekeningnummer",
-                "code": "required",
-                "reason": "Dit veld is vereist.",
-            },
             {
                 "name": "soortPartij",
                 "code": "required",
@@ -235,20 +215,8 @@ def test_create_with_bad_request_exception(client):
             },
         ],
         (
-            'status=400 code=400 title="Invalid input.":\n'
+            'status=400 code=400 title="Ongeldige invoerwaarde.":\n'
             "Invalid parameters:\n"
-            "{'code': 'required',\n"
-            " 'name': 'digitaleAdressen',\n"
-            " 'reason': 'Dit veld is vereist.'}\n"
-            "{'code': 'required',\n"
-            " 'name': 'voorkeursDigitaalAdres',\n"
-            " 'reason': 'Dit veld is vereist.'}\n"
-            "{'code': 'required',\n"
-            " 'name': 'rekeningnummers',\n"
-            " 'reason': 'Dit veld is vereist.'}\n"
-            "{'code': 'required',\n"
-            " 'name': 'voorkeursRekeningnummer',\n"
-            " 'reason': 'Dit veld is vereist.'}\n"
             "{'code': 'required', 'name': 'soortPartij', "
             "'reason': 'Dit veld is vereist.'}\n"
             "{'code': 'required',\n"

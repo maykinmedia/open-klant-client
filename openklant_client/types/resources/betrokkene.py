@@ -31,7 +31,7 @@ class BetrokkeneCreateData(BetrokkeneBaseCreateData):
 class Betrokkene(TypedDict):
     uuid: str
     url: str
-    wasPartij: FullForeigKeyRef
+    wasPartij: FullForeigKeyRef | None
     hadKlantcontact: FullForeigKeyRef
     digitaleAdressen: list[FullForeigKeyRef]
     bezoekadres: Adres

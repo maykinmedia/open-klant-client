@@ -13,8 +13,6 @@ from openklant_client.types.error import (
 class OpenKlant2Exception(Exception):
     """Base exception for all client-related errors."""
 
-    pass
-
 
 class ResponseError(OpenKlant2Exception):
     """A response was received, but it was erroneous in some aspect."""

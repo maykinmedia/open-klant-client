@@ -1,40 +1,39 @@
 interactions:
 - request:
-    body: '{"naam": "Kristin Williams", "soortActor": "geautomatiseerde_actor", "indicatieActief":
-      true, "actoridentificator": {"objectId": "0000000022", "codeObjecttype": "value",
-      "codeRegister": "away", "codeSoortObjectId": "consider"}}'
+    body: '{"naam": "Katherine Carter", "soortActor": "medewerker", "indicatieActief":
+      true, "actoridentificator": {"objectId": "0000000022", "codeObjecttype": "cup",
+      "codeRegister": "field", "codeSoortObjectId": "like"}}'
     headers:
       Authorization:
       - Token b2eb1da9861da88743d72a3fb4344288fe2cba44
       Content-Length:
-      - '227'
+      - '210'
       Content-Type:
       - application/json
     method: POST
     uri: http://localhost:8338/klantinteracties/api/v1/actoren
   response:
     body:
-      string: '{"uuid":"7f151dd2-6865-4c7e-9dae-2bf4b0627260","url":"http://localhost:8338/klantinteracties/api/v1/actoren/7f151dd2-6865-4c7e-9dae-2bf4b0627260","naam":"Kristin
-        Williams","soortActor":"geautomatiseerde_actor","indicatieActief":true,"actoridentificator":{"objectId":"0000000022","codeObjecttype":"value","codeRegister":"away","codeSoortObjectId":"consider"},"actorIdentificatie":null}'
+      string: '{"uuid":"af6ded1a-e3cd-47aa-a7bc-706740cb9e25","url":"http://localhost:8338/klantinteracties/api/v1/actoren/af6ded1a-e3cd-47aa-a7bc-706740cb9e25","naam":"Katherine
+        Carter","soortActor":"medewerker","indicatieActief":true,"actoridentificator":{"objectId":"0000000022","codeObjecttype":"cup","codeRegister":"field","codeSoortObjectId":"like"},"actorIdentificatie":null}'
     headers:
       API-version:
-      - 0.1.2
+      - 0.8.0
       Allow:
       - GET, POST, HEAD, OPTIONS
       Content-Length:
-      - '384'
+      - '367'
       Content-Security-Policy:
-      - 'frame-ancestors ''none''; frame-src ''self''; worker-src ''self'' blob:;
-        default-src ''self''; font-src ''self'' fonts.gstatic.com; object-src ''none'';
-        img-src ''self'' data: cdn.redoc.ly; base-uri ''self''; style-src ''self''
-        ''unsafe-inline'' fonts.googleapis.com; form-action ''self''; script-src ''self''
-        ''unsafe-inline'''
+      - 'form-action ''self''; frame-src ''self''; style-src ''self'' ''unsafe-inline''
+        fonts.googleapis.com; script-src ''self'' ''unsafe-inline''; worker-src ''self''
+        blob:; default-src ''self''; object-src ''none''; img-src ''self'' data: cdn.redoc.ly;
+        base-uri ''self''; font-src ''self'' fonts.gstatic.com; frame-ancestors ''none'''
       Content-Type:
       - application/json
       Cross-Origin-Opener-Policy:
       - same-origin
       Location:
-      - http://localhost:8338/klantinteracties/api/v1/actoren/7f151dd2-6865-4c7e-9dae-2bf4b0627260
+      - http://localhost:8338/klantinteracties/api/v1/actoren/af6ded1a-e3cd-47aa-a7bc-706740cb9e25
       Referrer-Policy:
       - same-origin
       Vary:
@@ -47,41 +46,40 @@ interactions:
       code: 201
       message: Created
 - request:
-    body: '{"naam": "Dr. Gregory Santana", "soortActor": "organisatorische_eenheid",
-      "indicatieActief": true, "actoridentificator": {"objectId": "0000000023", "codeObjecttype":
-      "task", "codeRegister": "knowledge", "codeSoortObjectId": "politics"}}'
+    body: '{"naam": "David Quinn", "soortActor": "organisatorische_eenheid", "indicatieActief":
+      true, "actoridentificator": {"objectId": "0000000023", "codeObjecttype": "yourself",
+      "codeRegister": "door", "codeSoortObjectId": "middle"}}'
     headers:
       Authorization:
       - Token b2eb1da9861da88743d72a3fb4344288fe2cba44
       Content-Length:
-      - '236'
+      - '225'
       Content-Type:
       - application/json
     method: POST
     uri: http://localhost:8338/klantinteracties/api/v1/actoren
   response:
     body:
-      string: '{"uuid":"75976ea5-d59e-4787-bda9-052f95b7a142","url":"http://localhost:8338/klantinteracties/api/v1/actoren/75976ea5-d59e-4787-bda9-052f95b7a142","naam":"Dr.
-        Gregory Santana","soortActor":"organisatorische_eenheid","indicatieActief":true,"actoridentificator":{"objectId":"0000000023","codeObjecttype":"task","codeRegister":"knowledge","codeSoortObjectId":"politics"},"actorIdentificatie":null}'
+      string: '{"uuid":"65c20fe6-137f-474a-83a1-144bd9bfe8ed","url":"http://localhost:8338/klantinteracties/api/v1/actoren/65c20fe6-137f-474a-83a1-144bd9bfe8ed","naam":"David
+        Quinn","soortActor":"organisatorische_eenheid","indicatieActief":true,"actoridentificator":{"objectId":"0000000023","codeObjecttype":"yourself","codeRegister":"door","codeSoortObjectId":"middle"},"actorIdentificatie":null}'
     headers:
       API-version:
-      - 0.1.2
+      - 0.8.0
       Allow:
       - GET, POST, HEAD, OPTIONS
       Content-Length:
-      - '393'
+      - '382'
       Content-Security-Policy:
-      - 'frame-ancestors ''none''; frame-src ''self''; worker-src ''self'' blob:;
-        default-src ''self''; font-src ''self'' fonts.gstatic.com; object-src ''none'';
-        img-src ''self'' data: cdn.redoc.ly; base-uri ''self''; style-src ''self''
-        ''unsafe-inline'' fonts.googleapis.com; form-action ''self''; script-src ''self''
-        ''unsafe-inline'''
+      - 'form-action ''self''; frame-src ''self''; style-src ''self'' ''unsafe-inline''
+        fonts.googleapis.com; script-src ''self'' ''unsafe-inline''; worker-src ''self''
+        blob:; default-src ''self''; object-src ''none''; img-src ''self'' data: cdn.redoc.ly;
+        base-uri ''self''; font-src ''self'' fonts.gstatic.com; frame-ancestors ''none'''
       Content-Type:
       - application/json
       Cross-Origin-Opener-Policy:
       - same-origin
       Location:
-      - http://localhost:8338/klantinteracties/api/v1/actoren/75976ea5-d59e-4787-bda9-052f95b7a142
+      - http://localhost:8338/klantinteracties/api/v1/actoren/65c20fe6-137f-474a-83a1-144bd9bfe8ed
       Referrer-Policy:
       - same-origin
       Vary:
@@ -94,41 +92,40 @@ interactions:
       code: 201
       message: Created
 - request:
-    body: '{"naam": "Leslie Smith", "soortActor": "organisatorische_eenheid", "indicatieActief":
-      false, "actoridentificator": {"objectId": "0000000024", "codeObjecttype": "across",
-      "codeRegister": "single", "codeSoortObjectId": "modern"}}'
+    body: '{"naam": "Christian Edwards", "soortActor": "organisatorische_eenheid",
+      "indicatieActief": false, "actoridentificator": {"objectId": "0000000024", "codeObjecttype":
+      "perhaps", "codeRegister": "think", "codeSoortObjectId": "discuss"}}'
     headers:
       Authorization:
       - Token b2eb1da9861da88743d72a3fb4344288fe2cba44
       Content-Length:
-      - '227'
+      - '233'
       Content-Type:
       - application/json
     method: POST
     uri: http://localhost:8338/klantinteracties/api/v1/actoren
   response:
     body:
-      string: '{"uuid":"89a92950-c42f-4d8a-b473-72c8aec9d7ad","url":"http://localhost:8338/klantinteracties/api/v1/actoren/89a92950-c42f-4d8a-b473-72c8aec9d7ad","naam":"Leslie
-        Smith","soortActor":"organisatorische_eenheid","indicatieActief":false,"actoridentificator":{"objectId":"0000000024","codeObjecttype":"across","codeRegister":"single","codeSoortObjectId":"modern"},"actorIdentificatie":null}'
+      string: '{"uuid":"d6ee972c-10e8-428b-bf28-fc0b2ab12aa3","url":"http://localhost:8338/klantinteracties/api/v1/actoren/d6ee972c-10e8-428b-bf28-fc0b2ab12aa3","naam":"Christian
+        Edwards","soortActor":"organisatorische_eenheid","indicatieActief":false,"actoridentificator":{"objectId":"0000000024","codeObjecttype":"perhaps","codeRegister":"think","codeSoortObjectId":"discuss"},"actorIdentificatie":null}'
     headers:
       API-version:
-      - 0.1.2
+      - 0.8.0
       Allow:
       - GET, POST, HEAD, OPTIONS
       Content-Length:
-      - '384'
+      - '390'
       Content-Security-Policy:
-      - 'frame-ancestors ''none''; frame-src ''self''; worker-src ''self'' blob:;
-        default-src ''self''; font-src ''self'' fonts.gstatic.com; object-src ''none'';
-        img-src ''self'' data: cdn.redoc.ly; base-uri ''self''; style-src ''self''
-        ''unsafe-inline'' fonts.googleapis.com; form-action ''self''; script-src ''self''
-        ''unsafe-inline'''
+      - 'form-action ''self''; frame-src ''self''; style-src ''self'' ''unsafe-inline''
+        fonts.googleapis.com; script-src ''self'' ''unsafe-inline''; worker-src ''self''
+        blob:; default-src ''self''; object-src ''none''; img-src ''self'' data: cdn.redoc.ly;
+        base-uri ''self''; font-src ''self'' fonts.gstatic.com; frame-ancestors ''none'''
       Content-Type:
       - application/json
       Cross-Origin-Opener-Policy:
       - same-origin
       Location:
-      - http://localhost:8338/klantinteracties/api/v1/actoren/89a92950-c42f-4d8a-b473-72c8aec9d7ad
+      - http://localhost:8338/klantinteracties/api/v1/actoren/d6ee972c-10e8-428b-bf28-fc0b2ab12aa3
       Referrer-Policy:
       - same-origin
       Vary:
@@ -149,21 +146,20 @@ interactions:
     uri: http://localhost:8338/klantinteracties/api/v1/actoren?indicatieActief=False&soortActor=organisatorische_eenheid
   response:
     body:
-      string: '{"count":1,"next":null,"previous":null,"results":[{"uuid":"89a92950-c42f-4d8a-b473-72c8aec9d7ad","url":"http://localhost:8338/klantinteracties/api/v1/actoren/89a92950-c42f-4d8a-b473-72c8aec9d7ad","naam":"Leslie
-        Smith","soortActor":"organisatorische_eenheid","indicatieActief":false,"actoridentificator":{"objectId":"0000000024","codeObjecttype":"across","codeRegister":"single","codeSoortObjectId":"modern"},"actorIdentificatie":null}]}'
+      string: '{"count":1,"next":null,"previous":null,"results":[{"uuid":"d6ee972c-10e8-428b-bf28-fc0b2ab12aa3","url":"http://localhost:8338/klantinteracties/api/v1/actoren/d6ee972c-10e8-428b-bf28-fc0b2ab12aa3","naam":"Christian
+        Edwards","soortActor":"organisatorische_eenheid","indicatieActief":false,"actoridentificator":{"objectId":"0000000024","codeObjecttype":"perhaps","codeRegister":"think","codeSoortObjectId":"discuss"},"actorIdentificatie":null}]}'
     headers:
       API-version:
-      - 0.1.2
+      - 0.8.0
       Allow:
       - GET, POST, HEAD, OPTIONS
       Content-Length:
-      - '436'
+      - '442'
       Content-Security-Policy:
-      - 'frame-ancestors ''none''; frame-src ''self''; worker-src ''self'' blob:;
-        default-src ''self''; font-src ''self'' fonts.gstatic.com; object-src ''none'';
-        img-src ''self'' data: cdn.redoc.ly; base-uri ''self''; style-src ''self''
-        ''unsafe-inline'' fonts.googleapis.com; form-action ''self''; script-src ''self''
-        ''unsafe-inline'''
+      - 'form-action ''self''; frame-src ''self''; style-src ''self'' ''unsafe-inline''
+        fonts.googleapis.com; script-src ''self'' ''unsafe-inline''; worker-src ''self''
+        blob:; default-src ''self''; object-src ''none''; img-src ''self'' data: cdn.redoc.ly;
+        base-uri ''self''; font-src ''self'' fonts.gstatic.com; frame-ancestors ''none'''
       Content-Type:
       - application/json
       Cross-Origin-Opener-Policy:

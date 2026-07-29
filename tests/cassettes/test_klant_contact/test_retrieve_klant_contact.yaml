@@ -1,40 +1,39 @@
 interactions:
 - request:
-    body: '{"nummer": "0000000112", "kanaal": "north", "onderwerp": "suddenly", "inhoud":
-      "Me participant scene mean suggest trip.", "taal": "nld", "indicatieContactGelukt":
-      true, "vertrouwelijk": true, "plaatsgevondenOp": "2020-09-07T19:07:40.948108"}'
+    body: '{"nummer": "0000000112", "kanaal": "stuff", "onderwerp": "coach", "inhoud":
+      "Group plant floor election soon.", "taal": "nld", "indicatieContactGelukt":
+      false, "vertrouwelijk": true, "plaatsgevondenOp": "2020-12-05T16:03:29.984651"}'
     headers:
       Authorization:
       - Token b2eb1da9861da88743d72a3fb4344288fe2cba44
       Content-Length:
-      - '241'
+      - '232'
       Content-Type:
       - application/json
     method: POST
     uri: http://localhost:8338/klantinteracties/api/v1/klantcontacten
   response:
     body:
-      string: '{"uuid":"c02881ed-748b-41bf-8217-b87b5390110d","url":"http://localhost:8338/klantinteracties/api/v1/klantcontacten/c02881ed-748b-41bf-8217-b87b5390110d","gingOverOnderwerpobjecten":[],"hadBetrokkenActoren":[],"omvatteBijlagen":[],"hadBetrokkenen":[],"leiddeTotInterneTaken":[],"nummer":"0000000112","kanaal":"north","onderwerp":"suddenly","inhoud":"Me
-        participant scene mean suggest trip.","indicatieContactGelukt":true,"taal":"nld","vertrouwelijk":true,"plaatsgevondenOp":"2020-09-07T19:07:40.948108Z"}'
+      string: '{"uuid":"863f104e-1b82-45bd-a0c4-33c6f261ec22","url":"http://localhost:8338/klantinteracties/api/v1/klantcontacten/863f104e-1b82-45bd-a0c4-33c6f261ec22","gingOverOnderwerpobjecten":[],"hadBetrokkenActoren":[],"omvatteBijlagen":[],"hadBetrokkenen":[],"leiddeTotInterneTaken":[],"nummer":"0000000112","referentienummer":null,"kanaal":"stuff","onderwerp":"coach","inhoud":"Group
+        plant floor election soon.","reactie":"","indicatieContactGelukt":false,"taal":"nld","vertrouwelijk":true,"plaatsgevondenOp":"2020-12-05T16:03:29.984651Z","metadata":{}}'
     headers:
       API-version:
-      - 0.1.2
+      - 0.8.0
       Allow:
       - GET, POST, HEAD, OPTIONS
       Content-Length:
-      - '503'
+      - '545'
       Content-Security-Policy:
-      - 'frame-ancestors ''none''; frame-src ''self''; worker-src ''self'' blob:;
-        default-src ''self''; font-src ''self'' fonts.gstatic.com; object-src ''none'';
-        img-src ''self'' data: cdn.redoc.ly; base-uri ''self''; style-src ''self''
-        ''unsafe-inline'' fonts.googleapis.com; form-action ''self''; script-src ''self''
-        ''unsafe-inline'''
+      - 'form-action ''self''; frame-src ''self''; style-src ''self'' ''unsafe-inline''
+        fonts.googleapis.com; script-src ''self'' ''unsafe-inline''; worker-src ''self''
+        blob:; default-src ''self''; object-src ''none''; img-src ''self'' data: cdn.redoc.ly;
+        base-uri ''self''; font-src ''self'' fonts.gstatic.com; frame-ancestors ''none'''
       Content-Type:
       - application/json
       Cross-Origin-Opener-Policy:
       - same-origin
       Location:
-      - http://localhost:8338/klantinteracties/api/v1/klantcontacten/c02881ed-748b-41bf-8217-b87b5390110d
+      - http://localhost:8338/klantinteracties/api/v1/klantcontacten/863f104e-1b82-45bd-a0c4-33c6f261ec22
       Referrer-Policy:
       - same-origin
       Vary:
@@ -52,24 +51,23 @@ interactions:
       Authorization:
       - Token b2eb1da9861da88743d72a3fb4344288fe2cba44
     method: GET
-    uri: http://localhost:8338/klantinteracties/api/v1/klantcontacten/c02881ed-748b-41bf-8217-b87b5390110d
+    uri: http://localhost:8338/klantinteracties/api/v1/klantcontacten/863f104e-1b82-45bd-a0c4-33c6f261ec22
   response:
     body:
-      string: '{"uuid":"c02881ed-748b-41bf-8217-b87b5390110d","url":"http://localhost:8338/klantinteracties/api/v1/klantcontacten/c02881ed-748b-41bf-8217-b87b5390110d","gingOverOnderwerpobjecten":[],"hadBetrokkenActoren":[],"omvatteBijlagen":[],"hadBetrokkenen":[],"leiddeTotInterneTaken":[],"nummer":"0000000112","kanaal":"north","onderwerp":"suddenly","inhoud":"Me
-        participant scene mean suggest trip.","indicatieContactGelukt":true,"taal":"nld","vertrouwelijk":true,"plaatsgevondenOp":"2020-09-07T19:07:40.948108Z"}'
+      string: '{"uuid":"863f104e-1b82-45bd-a0c4-33c6f261ec22","url":"http://localhost:8338/klantinteracties/api/v1/klantcontacten/863f104e-1b82-45bd-a0c4-33c6f261ec22","gingOverOnderwerpobjecten":[],"hadBetrokkenActoren":[],"omvatteBijlagen":[],"hadBetrokkenen":[],"leiddeTotInterneTaken":[],"nummer":"0000000112","referentienummer":null,"kanaal":"stuff","onderwerp":"coach","inhoud":"Group
+        plant floor election soon.","reactie":"","indicatieContactGelukt":false,"taal":"nld","vertrouwelijk":true,"plaatsgevondenOp":"2020-12-05T16:03:29.984651Z","metadata":{}}'
     headers:
       API-version:
-      - 0.1.2
+      - 0.8.0
       Allow:
       - GET, PUT, PATCH, DELETE, HEAD, OPTIONS
       Content-Length:
-      - '503'
+      - '545'
       Content-Security-Policy:
-      - 'frame-ancestors ''none''; frame-src ''self''; worker-src ''self'' blob:;
-        default-src ''self''; font-src ''self'' fonts.gstatic.com; object-src ''none'';
-        img-src ''self'' data: cdn.redoc.ly; base-uri ''self''; style-src ''self''
-        ''unsafe-inline'' fonts.googleapis.com; form-action ''self''; script-src ''self''
-        ''unsafe-inline'''
+      - 'form-action ''self''; frame-src ''self''; style-src ''self'' ''unsafe-inline''
+        fonts.googleapis.com; script-src ''self'' ''unsafe-inline''; worker-src ''self''
+        blob:; default-src ''self''; object-src ''none''; img-src ''self'' data: cdn.redoc.ly;
+        base-uri ''self''; font-src ''self'' fonts.gstatic.com; frame-ancestors ''none'''
       Content-Type:
       - application/json
       Cross-Origin-Opener-Policy:

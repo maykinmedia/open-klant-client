@@ -36,7 +36,7 @@ class KlantContactResource(ResourceMixin):
         *,
         params: RetrieveKlantContactParams | None = None,
     ) -> KlantContact:
-        response = self._get(f"{self.base_path}/{str(uuid)}", params=params)
+        response = self._get(f"{self.base_path}/{uuid!s}", params=params)
         return cast(KlantContact, self.process_response(response))
 
     def list(
