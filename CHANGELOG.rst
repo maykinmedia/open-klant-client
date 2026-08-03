@@ -2,6 +2,12 @@
 Changelog
 =========
 
+0.5.0 (2025-07-30)
+==================
+
+* Add 'referentie' attribute for the 'DigitaalAdres' resource.
+* Updated supported Open Klant version to 2.17.1.
+
 0.4.0 (2025-12-19)
 ==================
 
