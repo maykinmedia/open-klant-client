@@ -30,6 +30,7 @@ class OnderwerpObject(TypedDict):
 
 
 class OnderwerpobjectIdentificatorListParams(TypedDict, total=False):
+    klantcontact__uuid: str
     onderwerpobjectidentificatorCodeObjecttype: str
     onderwerpobjectidentificatorCodeRegister: str
     onderwerpobjectidentificatorCodeSoortObjectId: str
