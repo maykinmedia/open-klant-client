@@ -30,6 +30,7 @@ class ListKlantContactParams(TypedDict, total=False):
     ]
     hadBetrokkene__url: str
     hadBetrokkene__uuid: str
+    hadBetrokkene__wasPartij__uuid: str
     indicatieContactGelukt: BooleanQueryParam
     inhoud: str
     kanaal: str
