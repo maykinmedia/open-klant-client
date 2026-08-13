@@ -2,6 +2,12 @@
 Changelog
 =========
 
+0.6.0 (2026-08-13)
+==================
+
+* Add 'hadBetrokkene__wasPartij__uuid' filter for the 'KlantContact' resource.
+* Add 'klantcontact__uuid' filter for the 'Onderwerpobjectidentificator' resource.
+
 0.5.0 (2025-07-30)
 ==================
 
