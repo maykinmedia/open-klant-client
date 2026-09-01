@@ -230,13 +230,13 @@ class ResourceMixin:
             params=self._process_params(params),
         )
 
-    def _make_list_iter(
-        self, f: Callable[P, PaginatedResponseBody[T]]
-    ) -> Callable[P, Generator[T, Any, Any]]:
+    def _make_list_iter(self, f: Callable[P, PaginatedResponseBody[T]]):
         """Create a fully paginated iterator for the resource list() method."""
 
-        def inner(*args: P.args, **kwargs: P.kwargs) -> Generator[T, Any, None]:
-            return self._paginator(f(*args, **kwargs))
+        def inner(
+            *args: P.args, max_requests: int | None = None, **kwargs: P.kwargs
+        ) -> Generator[T, Any, None]:
+            return self._paginator(f(*args, **kwargs), max_requests=max_requests)
 
         return inner
 
