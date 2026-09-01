@@ -2,7 +2,12 @@ from typing import Literal, NotRequired
 
 from typing_extensions import TypedDict
 
-from openklant_client.types.common import Adres, ForeignKeyRef, FullForeigKeyRef
+from openklant_client.types.common import (
+    Adres,
+    ForeignKeyRef,
+    FullForeigKeyRef,
+    PaginationParams,
+)
 
 BetrokkeneRol = Literal["vertegenwoordiger", "klant"]
 
@@ -45,3 +50,24 @@ class Betrokkene(TypedDict):
 
 class BetrokkeneRetrieveParams(TypedDict):
     expand: NotRequired[list[Literal["digitaleAdressen",]]]
+
+
+class BetrokkeneListParams(PaginationParams, total=False):
+    contactnaamAchternaam: str
+    contactnaamVoorletters: str
+    contactnaamVoornaam: str
+    contactnaamVoorvoegselAchternaam: str
+    expand: list[Literal["digitaleAdressen"]]
+    hadKlantcontact__referentienummer: str
+    hadKlantcontact__url: str
+    hadKlantcontact__uuid: str
+    organisatienaam: str
+    verstrektedigitaalAdres__adres: str
+    verstrektedigitaalAdres__url: str
+    verstrektedigitaalAdres__uuid: str
+    wasPartij__partijIdentificator__codeObjecttype: str
+    wasPartij__partijIdentificator__codeRegister: str
+    wasPartij__partijIdentificator__codeSoortObjectId: str
+    wasPartij__partijIdentificator__objectId: str
+    wasPartij__url: str
+    wasPartij__uuid: str

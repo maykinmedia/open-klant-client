@@ -2,7 +2,11 @@ from typing import NotRequired
 
 from typing_extensions import TypedDict
 
-from openklant_client.types.common import ForeignKeyRef, FullForeigKeyRef
+from openklant_client.types.common import (
+    ForeignKeyRef,
+    FullForeigKeyRef,
+    PaginationParams,
+)
 
 
 class OnderwerpObjectIdentificator(TypedDict):
@@ -29,9 +33,12 @@ class OnderwerpObject(TypedDict):
     onderwerpobjectidentificator: OnderwerpObjectIdentificator
 
 
-class OnderwerpobjectIdentificatorListParams(TypedDict, total=False):
+class OnderwerpobjectIdentificatorListParams(PaginationParams, total=False):
+    klantcontact__url: str
     klantcontact__uuid: str
     onderwerpobjectidentificatorCodeObjecttype: str
     onderwerpobjectidentificatorCodeRegister: str
     onderwerpobjectidentificatorCodeSoortObjectId: str
     onderwerpobjectidentificatorObjectId: str
+    wasKlantcontact__url: str
+    wasKlantcontact__uuid: str

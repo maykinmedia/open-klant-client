@@ -2,7 +2,11 @@ from typing import Literal, NotRequired, Required
 
 from typing_extensions import TypedDict
 
-from openklant_client.types.common import BooleanQueryParam, ForeignKeyRef
+from openklant_client.types.common import (
+    BooleanQueryParam,
+    ForeignKeyRef,
+    PaginationParams,
+)
 from openklant_client.types.iso_639_2 import LanguageCode
 
 
@@ -17,7 +21,7 @@ class CreateKlantContactData(TypedDict):
     plaatsgevondenOp: NotRequired[str]
 
 
-class ListKlantContactParams(TypedDict, total=False):
+class ListKlantContactParams(PaginationParams, total=False):
     expand: list[
         Literal[
             "gingOverOnderwerpobjecten",
@@ -42,7 +46,6 @@ class ListKlantContactParams(TypedDict, total=False):
     onderwerpobject__onderwerpobjectidentificatorObjectId: str
     onderwerpobject__url: str
     onderwerpobject__uuid: str
-    page: int
     plaatsgevondenOp: str
     vertrouwelijk: BooleanQueryParam
     wasOnderwerpobject__onderwerpobjectidentificatorCodeObjecttype: str

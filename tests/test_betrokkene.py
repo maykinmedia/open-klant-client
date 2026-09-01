@@ -133,8 +133,8 @@ def test_retrieve_betrokkene(client, een_betrokkene):
 
 @pytest.mark.vcr
 def test_list_betrokkenen_as_pagination_iter(client, betrokkene_factory):
-    # We can't specify the pagesize, so we have to use the default 100 to
-    # create more than 1 page of data
+    # Exercise the default pageSize (100) rather than overriding it via
+    # params, so we need more than 100 records to get more than 1 page.
     betrokkenen = [betrokkene_factory() for _ in range(101)]
     assert client.betrokkene.list()["next"] is not None
 
@@ -144,3 +144,16 @@ def test_list_betrokkenen_as_pagination_iter(client, betrokkene_factory):
     assert sorted(resp, key=lambda b: b["uuid"]) == sorted(
         (b | {"_expand": {}} for b in betrokkenen), key=lambda b: b["uuid"]
     )
+
+
+@pytest.mark.vcr
+def test_list_betrokkenen_iter_respects_max_requests(client, betrokkene_factory):
+    betrokkenen = [betrokkene_factory() for _ in range(3)]
+
+    # pageSize=1 forces 3 pages of 1 result each; max_requests=1 means the
+    # initial page plus one more page is fetched, not all three.
+    resp = list(client.betrokkene.list_iter(params={"pageSize": 1}, max_requests=1))
+
+    TypeAdapter(list[Betrokkene]).validate_python(resp)
+    assert len(betrokkenen) == 3
+    assert len(resp) == 2

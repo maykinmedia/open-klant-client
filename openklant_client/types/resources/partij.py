@@ -2,7 +2,12 @@ from typing import Literal, NotRequired
 
 from typing_extensions import TypedDict
 
-from openklant_client.types.common import Adres, CreateAdres, ForeignKeyRef
+from openklant_client.types.common import (
+    Adres,
+    CreateAdres,
+    ForeignKeyRef,
+    PaginationParams,
+)
 from openklant_client.types.iso_639_2 import LanguageCode
 from openklant_client.types.resources.digitaal_adres import DigitaalAdres
 from openklant_client.types.resources.partij_identificator import (
@@ -74,8 +79,7 @@ class PartialUpdatePartijData(CreatePartijDataBase, total=False):
     soortPartij: SoortPartij
 
 
-class PartijListParams(TypedDict, total=False):
-    page: int
+class PartijListParams(PaginationParams, total=False):
     vertegenwoordigdePartij__url: str
     partijIdentificator__codeObjecttype: str
     partijIdentificator__codeRegister: str

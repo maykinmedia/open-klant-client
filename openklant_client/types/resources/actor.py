@@ -2,7 +2,7 @@ from typing import Literal, NotRequired
 
 from typing_extensions import TypedDict
 
-from openklant_client.types.common import BooleanQueryParam
+from openklant_client.types.common import BooleanQueryParam, PaginationParams
 
 SoortActor = Literal["medewerker", "geautomatiseerde_actor", "organisatorische_eenheid"]
 
@@ -29,12 +29,11 @@ class Actor(TypedDict):
     actoridentificator: ActorIdentificator
 
 
-class ActorListParams(TypedDict, total=False):
+class ActorListParams(PaginationParams, total=False):
     actoridentificatorCodeObjecttype: str
     actoridentificatorCodeRegister: str
     actoridentificatorCodeSoortObjectId: str
     actoridentificatorObjectId: str
     indicatieActief: BooleanQueryParam
     naam: str
-    page: int
     soortActor: SoortActor
