@@ -2,7 +2,7 @@
 Open Klant Client
 =================
 
-:Version: 0.6.0
+:Version: 0.7.0
 
 A Python client library for interacting with the `Open Klant API <https://github.com/maykinmedia/open-klant>`_.
 
