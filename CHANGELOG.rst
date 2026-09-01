@@ -2,6 +2,15 @@
 Changelog
 =========
 
+0.7.0 (2026-09-01)
+==================
+
+* Add 'list_iter' for the 'Actor' and 'Partij' resources.
+* Add 'page' and 'pageSize' params for all list methods.
+* Fix 'list_iter' raising a 'TypeError' when passed 'max_requests'.
+* Add missing list filters for the 'Onderwerpobjectidentificator',
+  'PartijIdentificator', 'Betrokkene' and 'InterneTaak' resources.
+
 0.6.0 (2026-08-13)
 ==================
 
