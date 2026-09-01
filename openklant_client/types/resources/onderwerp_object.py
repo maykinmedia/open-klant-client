@@ -34,8 +34,11 @@ class OnderwerpObject(TypedDict):
 
 
 class OnderwerpobjectIdentificatorListParams(PaginationParams, total=False):
+    klantcontact__url: str
     klantcontact__uuid: str
     onderwerpobjectidentificatorCodeObjecttype: str
     onderwerpobjectidentificatorCodeRegister: str
     onderwerpobjectidentificatorCodeSoortObjectId: str
     onderwerpobjectidentificatorObjectId: str
+    wasKlantcontact__url: str
+    wasKlantcontact__uuid: str
