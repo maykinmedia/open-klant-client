@@ -19,7 +19,16 @@ class CreateInterneTaakData(TypedDict):
 
 
 class InterneTaakListParams(PaginationParams, total=False):
-    pass
+    aanleidinggevendKlantcontact__url: str
+    aanleidinggevendKlantcontact__uuid: str
+    actoren__naam: str
+    klantcontact__referentienummer: str
+    klantcontact__uuid: str
+    referentienummer: str
+    status: Literal["te_verwerken", "verwerkt"]
+    toegewezenAanActor__url: str
+    toegewezenAanActor__uuid: str
+    toegewezenOp: str
 
 
 class InterneTaak(TypedDict):
