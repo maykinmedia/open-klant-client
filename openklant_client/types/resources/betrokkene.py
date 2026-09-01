@@ -2,7 +2,12 @@ from typing import Literal, NotRequired
 
 from typing_extensions import TypedDict
 
-from openklant_client.types.common import Adres, ForeignKeyRef, FullForeigKeyRef
+from openklant_client.types.common import (
+    Adres,
+    ForeignKeyRef,
+    FullForeigKeyRef,
+    PaginationParams,
+)
 
 BetrokkeneRol = Literal["vertegenwoordiger", "klant"]
 
@@ -45,3 +50,7 @@ class Betrokkene(TypedDict):
 
 class BetrokkeneRetrieveParams(TypedDict):
     expand: NotRequired[list[Literal["digitaleAdressen",]]]
+
+
+class BetrokkeneListParams(PaginationParams, total=False):
+    pass

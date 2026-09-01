@@ -2,7 +2,7 @@ from typing import Literal, NotRequired
 
 from typing_extensions import TypedDict
 
-from openklant_client.types.common import ForeignKeyRef
+from openklant_client.types.common import ForeignKeyRef, PaginationParams
 
 #
 # Input
@@ -55,8 +55,7 @@ class CreatePartijIdentificatorData(TypedDict):
     subIdentificatorVan: NotRequired[ForeignKeyRef]
 
 
-class ListPartijIdentificatorenParams(TypedDict, total=False):
-    page: int
+class ListPartijIdentificatorenParams(PaginationParams, total=False):
     partijIdentificatorCodeObjecttype: CodeObjecttype
     partijIdentificatorCodeRegister: CodeRegister
     partijIdentificatorCodeSoortObjectId: CodeSoortObjectId

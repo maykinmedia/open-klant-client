@@ -11,6 +11,11 @@ from typing_extensions import TypedDict
 BooleanQueryParam = Literal["True", "False", "true", "false"] | bool
 
 
+class PaginationParams(TypedDict, total=False):
+    page: int
+    pageSize: int
+
+
 class CreateAdres(TypedDict):
     nummeraanduidingId: Required[str | None]
     adresregel1: NotRequired[str]

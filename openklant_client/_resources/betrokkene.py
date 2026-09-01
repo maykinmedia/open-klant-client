@@ -8,6 +8,7 @@ from openklant_client.types.pagination import PaginatedResponseBody
 from openklant_client.types.resources.betrokkene import (
     Betrokkene,
     BetrokkeneCreateData,
+    BetrokkeneListParams,
     BetrokkeneRetrieveParams,
 )
 
@@ -37,8 +38,10 @@ class BetrokkeneResource(ResourceMixin):
         response = self._get(f"{self.base_path}/{uuid!s}")
         return cast(Betrokkene, self.process_response(response))
 
-    def list(self) -> PaginatedResponseBody[Betrokkene]:
-        response = self._get(f"{self.base_path}")
+    def list(
+        self, *, params: BetrokkeneListParams | None = None
+    ) -> PaginatedResponseBody[Betrokkene]:
+        response = self._get(f"{self.base_path}", params=params)
         return cast(
             PaginatedResponseBody[Betrokkene],
             self.process_response(response),
