@@ -24,6 +24,7 @@ class DigitaalAdresCreateData(TypedDict):
     soortDigitaalAdres: SoortDigitaalAdres
     isStandaardAdres: NotRequired[bool]
     referentie: NotRequired[str]
+    verificatieDatum: NotRequired[str | None]
 
 
 class DigitaalAdresPartialUpdateData(TypedDict):
@@ -34,6 +35,7 @@ class DigitaalAdresPartialUpdateData(TypedDict):
     soortDigitaalAdres: NotRequired[SoortDigitaalAdres]
     isStandaardAdres: NotRequired[bool]
     referentie: NotRequired[str]
+    verificatieDatum: NotRequired[str | None]
 
 
 class ListDigitaalAdresParams(PaginationParams):
@@ -49,6 +51,7 @@ class ListDigitaalAdresParams(PaginationParams):
     adres: NotRequired[str]
     soortDigitaalAdres: NotRequired[SoortDigitaalAdres]
     referentie: NotRequired[str]
+    verificatieDatum: NotRequired[str | None]
 
 
 #
@@ -66,3 +69,4 @@ class DigitaalAdres(TypedDict):
     soortDigitaalAdres: SoortDigitaalAdres
     isStandaardAdres: bool
     referentie: str
+    verificatieDatum: NotRequired[str | None]
