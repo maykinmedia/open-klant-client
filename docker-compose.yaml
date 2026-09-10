@@ -1,6 +1,12 @@
 # This docker-compose is used internally in the testsuite to dynamically spin up
-# an OpenKlant2 backend, seed it with known data, and record VCR fixtures. Be
-# sure to verify any changes here are consistent with
+# an OpenKlant2 backend, seed it with known data, and record VCR fixtures.
+#
+# The Open Klant image tag below is the single source of truth for the version the
+# testsuite records against: tests/helpers.py reads it from this file and passes it
+# to docker compose explicitly. The cassettes in tests/cassettes are only valid for
+# that one version, and tests/test_cassettes.py enforces the pairing. When bumping
+# the tag, re-record the full suite with ./regenerate_vcr_fixtures.sh and update
+# OPEN_KLANT_API_VERSION in tests/helpers.py to match.
 services:
   db:
     image: postgres

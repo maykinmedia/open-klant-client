@@ -1,5 +1,7 @@
 import json
 import logging
+import os
+import re
 import subprocess
 import time
 from contextlib import contextmanager
@@ -11,8 +13,37 @@ import requests
 from openklant_client.client import OpenKlantClient
 
 BASE_DIR = Path(__file__).parent.parent.resolve()
+COMPOSE_PATH = BASE_DIR / "docker-compose.yaml"
+
+# The klantinteracties API version served by the image pinned in docker-compose.yaml.
+# Bump this together with the image tag; tests/test_cassettes.py enforces that the
+# recorded cassettes agree with it.
+OPEN_KLANT_API_VERSION = "0.8.0"
+
+_IMAGE_TAG_RE = re.compile(
+    r"maykinmedia/open-klant:\$\{OPEN_KLANT_IMAGE_TAG:-(?P<tag>[^}]+)\}"
+)
 
 logger = logging.getLogger(__name__)
+
+
+def _pinned_image_tag() -> str:
+    """Read the pinned Open Klant image tag from the docker-compose default.
+
+    docker-compose.yaml is the single source of truth for the version the
+    testsuite records against. Refuse to run if the pin has been removed.
+    """
+    match = _IMAGE_TAG_RE.search(COMPOSE_PATH.read_text())
+    if match is None:
+        raise RuntimeError(
+            f"No pinned Open Klant image tag found in {COMPOSE_PATH}. The testsuite "
+            f"refuses to run against an unpinned image, because the VCR cassettes in "
+            f"tests/cassettes are only valid for one specific version."
+        )
+    return match.group("tag")
+
+
+OPEN_KLANT_IMAGE_TAG = _pinned_image_tag()
 
 
 class OpenKlantServiceManager:
@@ -22,7 +53,7 @@ class OpenKlantServiceManager:
     _api_path: str = "/klantinteracties/api/v1"
     _api_token: str = "b2eb1da9861da88743d72a3fb4344288fe2cba44"
     _docker_compose_project_name: str = "openklant-api-test"
-    _docker_compose_path: Path = BASE_DIR / "docker-compose.yaml"
+    _docker_compose_path: Path = COMPOSE_PATH
 
     def _docker_compose(
         self,
@@ -44,6 +75,9 @@ class OpenKlantServiceManager:
                 ],
                 check=check,
                 capture_output=True,
+                # Pass the pin explicitly so an ambient OPEN_KLANT_IMAGE_TAG in the
+                # caller's environment cannot silently change what we record against.
+                env={**os.environ, "OPEN_KLANT_IMAGE_TAG": OPEN_KLANT_IMAGE_TAG},
                 **input_data,
             )
         except subprocess.CalledProcessError as exc:

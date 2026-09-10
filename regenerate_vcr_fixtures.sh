@@ -18,3 +18,8 @@ fi
 
 echo "Recording against: $(docker compose -f docker-compose.yaml config --images | grep open-klant)"
 pytest --with-openklant-service --record-mode=all -vvv
+
+# Verify the recording is uniform and matches the pinned version. The checks skip
+# themselves during recording, so they need this separate run.
+echo "Verifying the recorded cassettes..."
+pytest tests/test_cassettes.py
