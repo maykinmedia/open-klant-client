@@ -2,6 +2,11 @@
 Changelog
 =========
 
+0.8.0 (2026-09-10)
+==================
+
+* Add 'verificatieDatum' attribute for the 'DigitaalAdres' resource.
+
 0.7.0 (2026-09-01)
 ==================
 
