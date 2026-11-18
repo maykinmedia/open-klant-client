@@ -224,7 +224,7 @@ class ResourceMixin:
         params: MutableMapping | None = None,
     ) -> requests.Response:
         return self.http_client.request(
-            "delete",
+            "options",
             path,
             headers=headers,
             params=self._process_params(params),
