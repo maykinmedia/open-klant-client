@@ -2,6 +2,11 @@
 Changelog
 =========
 
+0.9.0 (2026-11-18)
+==================
+
+* Fix '_options' sending a 'DELETE' request instead of an 'OPTIONS' request.
+
 0.8.0 (2026-09-10)
 ==================
 
